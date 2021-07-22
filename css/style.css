@@ -48,15 +48,18 @@ svg {
   display: none; }
 
 .header {
-  padding: 0.5rem 4rem;
+  padding: 1rem 4rem 0 4rem;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
   .header__logo-box {
-    padding: 2rem 1.5rem; }
+    width: 8%;
+    height: 8%;
+    margin-right: auto; }
     .header__logo-box--logo {
-      width: 10%;
-      height: 10%; }
+      width: 50%;
+      height: 50%; }
   .header__nav {
     display: flex; }
     .header__nav--list {

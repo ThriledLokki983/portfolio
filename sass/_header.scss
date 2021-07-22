@@ -1,14 +1,18 @@
 .header {
-    padding: 0.5rem 4rem;
+    padding: 1rem 4rem 0 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: $shadow-dark;
 
     &__logo-box {
-        padding: 2rem 1.5rem;
+        width: 8%;
+        height: 8%;
+        margin-right: auto;
+
         &--logo {
-            width: 10%;
-            height: 10%;
+            width: 50%;
+            height: 50%;
         }
     }
 
