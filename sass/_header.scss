@@ -1,0 +1,48 @@
+.header {
+    padding: 0.5rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__logo-box {
+        padding: 2rem 1.5rem;
+        &--logo {
+            width: 10%;
+            height: 10%;
+        }
+    }
+
+    &__nav {
+        display: flex;
+
+        &--list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &--item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.3rem;
+
+            & span {
+                margin-right: 0.4rem;
+                color: $color-secondary;
+                font-family: "Roboto Mono", sans-serif;
+            }
+        }
+
+        &--link:link,
+        &--link:visited {
+            text-decoration: none;
+            text-transform: capitalize;
+            display: block;
+            padding: 0.5rem 1.5rem;
+            color: $font-color-primary;
+            display: flex;
+            align-items: center;
+        }
+    }
+}

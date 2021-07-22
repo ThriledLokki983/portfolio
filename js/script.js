@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
     const anim = anime.timeline({
-        easing: "easeOutBack",
+        easing: "easeOutExpo",
         duration: 750,
     });
 
@@ -8,14 +8,23 @@ window.addEventListener("DOMContentLoaded", () => {
         targets: "#hexagon path",
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: "easeInOutQuart",
-        duration: 2000,
+        baseFrequency: 0,
+        opacity: 1,
+        duration: 1000,
         delay: function (el, i) {
             return i * 250;
         },
     }).add({
         targets: "#hexagon #G",
-        duration: 1000,
+        baseFrequency: 0,
+        duration: 1500,
         opacity: 1,
         easing: "easeInOutQuart",
     });
 });
+
+const logo = document.querySelector(".intro__container");
+
+setTimeout(() => {
+    logo.classList.add("hidden");
+}, 4000);

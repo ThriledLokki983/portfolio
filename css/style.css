@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;1,400&family=Roboto:wght@100;300;500&display=swap");
 *,
 *::before,
 *::after {
@@ -27,20 +29,54 @@ body {
   align-items: center;
   margin: 45vh auto; }
 
-.logo__container.fade {
-  background-color: #0a192f;
-  display: none; }
-
 .intro {
-  background-color: #000;
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  transition: 0.1s; }
+  transition: all 0.3s; }
+  .intro__container {
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    transition: 0.1s; }
 
 svg {
   width: 100%;
   height: 100%;
-  display: flex;
   margin: 0 auto;
   fill: none; }
+
+.hidden {
+  display: none; }
+
+.header {
+  padding: 0.5rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .header__logo-box {
+    padding: 2rem 1.5rem; }
+    .header__logo-box--logo {
+      width: 10%;
+      height: 10%; }
+  .header__nav {
+    display: flex; }
+    .header__nav--list {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .header__nav--item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.3rem; }
+      .header__nav--item span {
+        margin-right: 0.4rem;
+        color: #64ffda;
+        font-family: "Roboto Mono", sans-serif; }
+    .header__nav--link:link, .header__nav--link:visited {
+      text-decoration: none;
+      text-transform: capitalize;
+      display: block;
+      padding: 0.5rem 1.5rem;
+      color: #fff;
+      display: flex;
+      align-items: center; }
