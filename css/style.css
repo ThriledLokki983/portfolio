@@ -124,7 +124,11 @@ svg {
   right: 4rem;
   z-index: 9;
   color: #a8b2d1;
-  overflow: hidden; }
+  overflow: hidden;
+  grid-column: 3 / 4; }
+  @media only screen and (max-width: 600px) {
+    .right {
+      display: none; } }
 
 .email {
   display: flex;
@@ -132,7 +136,9 @@ svg {
   align-items: center;
   justify-content: center;
   position: relative;
-  -webkit-box-align: center; }
+  -webkit-box-align: center;
+  padding: 0;
+  margin: 0; }
   .email a {
     padding: 0.7rem;
     margin: 0.5rem auto;
@@ -164,7 +170,11 @@ svg {
   color: #a8b2d1;
   display: flex;
   align-items: center;
-  overflow: hidden; }
+  overflow: hidden;
+  grid-column: 1 / 2; }
+  @media only screen and (max-width: 600px) {
+    .left {
+      display: none; } }
 
 .side__social {
   display: flex;
@@ -209,35 +219,30 @@ svg {
 
 .main {
   display: grid;
-  grid-template-columns: 5vw 90vw 5vw;
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 1rem; }
+  grid-template-columns: 5vw minmax(80vw, 1fr) 5vw;
+  grid-gap: 5rem;
+  align-items: center; }
 
 .content {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  grid-template-columns: 1fr;
   grid-column: 2/3;
-  padding: 4rem; }
-
-.left {
-  grid-column: 1 / 2; }
+  padding: 10rem auto; }
 
 .right {
   grid-column: 3 / 4; }
 
-section {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 10rem auto; }
-
 .home {
+  max-width: 80%;
   min-height: 100vh;
-  margin: auto 10rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   padding: 0 auto;
   -webkit-box-align: center;
-  -webkit-box-pack: center; }
+  -webkit-box-pack: center;
+  display: grid;
+  align-content: center;
+  justify-items: start; }
   .home__start {
     font-size: 1.4rem;
     margin-bottom: 2rem;
@@ -247,3 +252,7 @@ section {
     padding: 1.5rem 2.5rem;
     cursor: pointer;
     font-family: "Roboto Mono", "Roboto"; }
+
+.experience {
+  border: 1px solid #64ffda;
+  min-height: 80vh; }

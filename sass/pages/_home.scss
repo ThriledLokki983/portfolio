@@ -1,14 +1,16 @@
 .home {
+    max-width: 80%;
     min-height: 100vh;
-    margin: auto 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    // border: 1px solid $slate;
     padding: 0 auto;
+    // margin: auto 15rem;
+    // border: 1px solid $slate;
+
     -webkit-box-align: center;
     -webkit-box-pack: center;
+
+    display: grid;
+    align-content: center;
+    justify-items: start;
 
     &__start {
         font-size: 1.4rem;
@@ -22,4 +24,6 @@
         cursor: pointer;
         font-family: $font-robo;
     }
+
+    margin-bottom: $mb-md;
 }

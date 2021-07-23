@@ -22,27 +22,29 @@
 
 .main {
     display: grid;
-
-    grid-template-columns: 5vw 90vw 5vw;
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 1rem;
+    grid-template-columns: 5vw minmax(80vw, 1fr) 5vw;
+    grid-gap: 5rem;
+    align-items: center;
 }
 
 .content {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+
+    grid-template-columns: 1fr;
     grid-column: 2/3;
-    padding: 4rem;
+    padding: 10rem auto;
 }
 
 .left {
-    grid-column: 1 / 2;
 }
 
 .right {
     grid-column: 3 / 4;
 }
 
-section {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 10rem auto;
-}
+// section {
+//     max-width: 100%;
+//     margin: 0 auto;
+// }
