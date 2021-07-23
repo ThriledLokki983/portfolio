@@ -1,0 +1,48 @@
+.logo {
+    &__container {
+        width: max-content;
+        max-width: 100px;
+        align-items: center;
+        margin: 45vh auto;
+    }
+}
+
+.intro {
+    transition: all 0.3s;
+    position: relative;
+    &__container {
+        background-color: #000;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        transition: 0.1s;
+        z-index: 9999;
+    }
+}
+
+.main {
+    display: grid;
+
+    grid-template-columns: 5vw 90vw 5vw;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.content {
+    grid-column: 2/3;
+    padding: 4rem;
+}
+
+.left {
+    grid-column: 1 / 2;
+}
+
+.right {
+    grid-column: 3 / 4;
+}
+
+section {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10rem 0;
+}

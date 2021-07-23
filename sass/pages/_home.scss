@@ -1,0 +1,25 @@
+.home {
+    // min-height: 100vh;
+    margin: 30rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    // border: 1px solid $slate;
+    padding: 0;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+
+    &__start {
+        font-size: 1.4rem;
+        margin-bottom: $mb-sm;
+        font-family: $font-robo;
+    }
+
+    &__btn {
+        font-size: 1.5rem;
+        padding: 1.5rem 2.5rem;
+        cursor: pointer;
+        font-family: $font-robo;
+    }
+}
