@@ -58,8 +58,8 @@ svg {
     height: 8%;
     margin-right: auto; }
     .header__logo-box--logo {
-      width: 50%;
-      height: 50%; }
+      width: 35%;
+      height: 35%; }
   .header__nav {
     display: flex; }
     .header__nav--list {
