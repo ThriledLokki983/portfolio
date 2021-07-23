@@ -30,13 +30,31 @@ body {
   margin: 45vh auto; }
 
 .intro {
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  position: relative; }
   .intro__container {
     background-color: #000;
     position: fixed;
     width: 100%;
     height: 100vh;
-    transition: 0.1s; }
+    transition: 0.1s;
+    z-index: 9999; }
+
+.main {
+  display: grid;
+  grid-template-columns: 5vw 90vw 5vw;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem; }
+
+.content {
+  grid-column: 2/3;
+  padding: 4rem; }
+
+.left {
+  grid-column: 1 / 2; }
+
+.right {
+  grid-column: 3 / 4; }
 
 svg {
   width: 100%;
@@ -91,3 +109,75 @@ svg {
       color: #e6f1ff;
       display: flex;
       align-items: center; }
+
+.right {
+  width: 4rem;
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: 4rem;
+  z-index: 9;
+  color: #a8b2d1; }
+
+.email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  -webkit-box-align: center; }
+  .email a {
+    padding: 0.7rem;
+    margin: 0.5rem auto;
+    letter-spacing: 0.4em;
+    writing-mode: vertical-rl;
+    font-size: 1.1rem; }
+  .email::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 20rem;
+    margin: 0 auto;
+    background-color: #a8b2d1; }
+
+.mail {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: #a8b2d1;
+  position: relative; }
+
+.left {
+  width: 40px;
+  position: fixed;
+  bottom: 0;
+  right: auto;
+  left: 4rem;
+  z-index: 9;
+  color: #a8b2d1;
+  display: flex;
+  align-items: center; }
+
+.side__social {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  -webkit-box-align: center; }
+  .side__social--item:not(:last-child) {
+    margin-bottom: 1.5rem; }
+  .side__social::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 20rem;
+    margin: 1.5rem auto 0 auto;
+    align-self: center;
+    background-color: #a8b2d1; }
+
+.icon {
+  fill: #8892b0;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer; }

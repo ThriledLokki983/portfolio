@@ -1,0 +1,85 @@
+.right {
+    width: 4rem;
+    position: fixed;
+    bottom: 0;
+    left: auto;
+    right: 4rem;
+    z-index: 9;
+    color: $light-slate;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    -webkit-box-align: center;
+
+    & a {
+        padding: 0.7rem;
+        margin: 0.5rem auto;
+        letter-spacing: 0.4em;
+        writing-mode: vertical-rl;
+        font-size: 1.1rem;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 20rem;
+        margin: 0 auto;
+        background-color: $light-slate;
+    }
+}
+
+.mail {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: $light-slate;
+    position: relative;
+}
+
+.left {
+    width: 40px;
+    position: fixed;
+    bottom: 0;
+    right: auto;
+    left: 4rem;
+    z-index: 9;
+    color: $light-slate;
+    display: flex;
+    align-items: center;
+}
+
+.side__social {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    -webkit-box-align: center;
+
+    &--item:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 20rem;
+        margin: 1.5rem auto 0 auto;
+        align-self: center;
+        background-color: $light-slate;
+    }
+}
+
+.icon {
+    fill: $slate;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}

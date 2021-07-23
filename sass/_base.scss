@@ -5,6 +5,7 @@
 $color-primary: #0a192f;
 $color-secondary: #64ffda;
 $slate: #8892b0;
+$light-slate: #a8b2d1;
 $white: #e6f1ff;
 
 // FONT VARIABLES
@@ -52,12 +53,14 @@ body {
 
 .intro {
     transition: all 0.3s;
+    position: relative;
     &__container {
         background-color: #000;
         position: fixed;
         width: 100%;
         height: 100vh;
         transition: 0.1s;
+        z-index: 9999;
     }
 }
 
@@ -66,4 +69,18 @@ body {
 
     grid-template-columns: 5vw 90vw 5vw;
     grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.content {
+    grid-column: 2/3;
+    padding: 4rem;
+}
+
+.left {
+    grid-column: 1 / 2;
+}
+
+.right {
+    grid-column: 3 / 4;
 }
