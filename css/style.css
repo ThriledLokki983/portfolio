@@ -54,8 +54,8 @@ svg {
   justify-content: center;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
   .header__logo-box {
-    width: 8%;
-    height: 8%;
+    width: 10%;
+    height: 10%;
     margin-right: auto; }
     .header__logo-box--logo {
       width: 20%;
