@@ -123,7 +123,8 @@ svg {
   left: auto;
   right: 4rem;
   z-index: 9;
-  color: #a8b2d1; }
+  color: #a8b2d1;
+  overflow: hidden; }
 
 .email {
   display: flex;
@@ -162,7 +163,8 @@ svg {
   z-index: 9;
   color: #a8b2d1;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  overflow: hidden; }
 
 .side__social {
   display: flex;
@@ -224,15 +226,16 @@ svg {
 section {
   max-width: 100%;
   margin: 0 auto;
-  padding: 10rem 0; }
+  padding: 10rem auto; }
 
 .home {
-  margin: 30rem auto;
+  min-height: 100vh;
+  margin: auto 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 6rem;
+  padding: 0 auto;
   -webkit-box-align: center;
   -webkit-box-pack: center; }
   .home__start {

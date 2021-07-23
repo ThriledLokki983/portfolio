@@ -24,6 +24,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased; }
 
+.warning {
+  font-size: "Roboto Mono", "Roboto";
+  color: red;
+  text-align: center;
+  font-size: 1rem; }
+
 .heading__main {
   margin: 0;
   font-size: clamp(40px, 8vw, 80px); }

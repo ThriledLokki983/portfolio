@@ -6,6 +6,7 @@
     right: 4rem;
     z-index: 9;
     color: $light-slate;
+    overflow: hidden;
 }
 
 .email {
@@ -52,6 +53,7 @@
     color: $light-slate;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .side__social {
