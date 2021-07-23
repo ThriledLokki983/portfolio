@@ -50,3 +50,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
+
+.warning {
+    font-size: $font-robo;
+    color: red;
+    text-align: center;
+    font-size: 1rem;
+}
