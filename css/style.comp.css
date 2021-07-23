@@ -135,7 +135,7 @@ svg {
   .email::after {
     content: "";
     display: block;
-    width: 1px;
+    width: 0.5px;
     height: 20rem;
     margin: 0 auto;
     background-color: #a8b2d1; }
@@ -170,7 +170,7 @@ svg {
   .side__social::after {
     content: "";
     display: block;
-    width: 1px;
+    width: 0.5px;
     height: 20rem;
     margin: 1.5rem auto 0 auto;
     align-self: center;
