@@ -48,7 +48,7 @@ svg {
   display: none; }
 
 .header {
-  padding: 1rem 7rem 0.5rem 7rem;
+  padding: 1rem 10rem 0.5rem 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,8 +58,8 @@ svg {
     height: 8%;
     margin-right: auto; }
     .header__logo-box--logo {
-      width: 25%;
-      height: 25%; }
+      width: 20%;
+      height: 20%; }
   .header__nav {
     display: flex; }
     .header__nav--list {
