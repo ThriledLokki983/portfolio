@@ -47,19 +47,27 @@ svg {
 .hidden {
   display: none; }
 
+.header__btn {
+  padding: 0.8rem 1rem;
+  border: 1px solid #64ffda;
+  background-color: inherit;
+  border-radius: 5px;
+  color: #64ffda;
+  cursor: pointer; }
+
 .header {
-  padding: 1rem 4rem 0 4rem;
+  padding: 1rem 10rem 0.5rem 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
   .header__logo-box {
-    width: 8%;
-    height: 8%;
+    width: 10%;
+    height: 10%;
     margin-right: auto; }
     .header__logo-box--logo {
-      width: 30%;
-      height: 30%; }
+      width: 20%;
+      height: 20%; }
   .header__nav {
     display: flex; }
     .header__nav--list {
@@ -80,6 +88,6 @@ svg {
       text-transform: capitalize;
       display: block;
       padding: 0.5rem 1.5rem;
-      color: #fff;
+      color: #e6f1ff;
       display: flex;
       align-items: center; }
