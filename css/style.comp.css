@@ -58,9 +58,22 @@ body {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #8892b0;
+  font-family: "Roboto Mono", "Roboto";
   margin-bottom: 4rem; }
+  .paragraph__link:visited, .paragraph__link:active {
+    text-decoration: none;
+    color: #64ffda; }
+    .paragraph__link:visited span, .paragraph__link:active span {
+      margin-left: 3px;
+      transition: margin-left 0.2s; }
+  .paragraph__link:hover, .paragraph__link:active {
+    border-radius: 3px; }
+    .paragraph__link:hover span, .paragraph__link:active span {
+      margin-left: 8px; }
+  .paragraph a {
+    text-decoration: none; }
 
 svg {
   width: 100%;
@@ -241,7 +254,7 @@ svg {
   -webkit-box-align: center;
   -webkit-box-pack: center;
   display: grid;
-  grid-template-columns: max-content;
+  grid-template-columns: minmax(max-content, min-content);
   align-content: center;
   justify-items: start;
   margin-bottom: 8rem; }
