@@ -1,14 +1,14 @@
 .home {
     max-width: 80%;
-    min-height: 100vh;
+    min-height: 90vh;
     padding: 0 auto;
-    // margin: auto 15rem;
     // border: 1px solid $slate;
 
     -webkit-box-align: center;
     -webkit-box-pack: center;
 
     display: grid;
+    grid-template-columns: max-content;
     align-content: center;
     justify-items: start;
 
@@ -25,5 +25,5 @@
         font-family: $font-robo;
     }
 
-    margin-bottom: $mb-md;
+    margin-bottom: $mb-hg;
 }
