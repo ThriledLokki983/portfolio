@@ -161,9 +161,9 @@
             // For all browser supports
             @supports (-webkit-mask-image: url()) or (mask-image: url()) {
                 background-color: $color-secondary;
-                -webkit-mask-image: url("../../img/play.svg");
+                -webkit-mask-image: url("../img/play.svg");
                 -webkit-mask-size: cover;
-                mask-image: url("../../img/play.svg");
+                mask-image: url("../img/play.svg");
                 mask-size: cover;
             }
         }
