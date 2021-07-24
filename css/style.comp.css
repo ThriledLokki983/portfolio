@@ -73,7 +73,10 @@ body {
     .paragraph__link:hover span, .paragraph__link:active span {
       margin-left: 8px; }
   .paragraph a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #64ffda;
+    font-family: "Roboto Mono", "Roboto";
+    font-weight: 500; }
 
 svg {
   width: 100%;
@@ -268,8 +271,38 @@ svg {
     cursor: pointer;
     font-family: "Roboto Mono", "Roboto"; }
 
-.experience {
-  border: 1px solid #64ffda;
+.about {
   min-height: 80vh;
+  max-width: 90rem;
   display: grid;
-  grid-template-columns: minmax(max-content, min-content); }
+  grid-template-columns: minmax(max-content, min-content);
+  align-content: center;
+  justify-items: start; }
+
+.heading__number {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  margin: 10px 0px 40px;
+  width: 100%;
+  font-size: clamp(26px, 5vw, var(--fz-heading));
+  white-space: nowrap; }
+  .heading__number::before {
+    position: relative;
+    bottom: 4px;
+    content: "01";
+    margin-right: 10px;
+    color: #64ffda;
+    font-family: "Roboto Mono", "Roboto";
+    font-size: 20rem;
+    font-weight: 400; }
+  .heading__number::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: -5px;
+    width: 300px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: #a8b2d1; }
