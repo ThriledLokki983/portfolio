@@ -89,6 +89,7 @@ body {
 }
 .paragraph a {
     text-decoration: none;
+    color: #64ffda;
 }
 svg {
     width: 100%;
