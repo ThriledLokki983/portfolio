@@ -270,4 +270,6 @@ svg {
 
 .experience {
   border: 1px solid #64ffda;
-  min-height: 80vh; }
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: minmax(max-content, min-content); }
