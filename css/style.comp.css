@@ -260,7 +260,7 @@ svg {
   grid-template-columns: minmax(max-content, min-content);
   align-content: center;
   justify-items: start;
-  margin-bottom: 8rem; }
+  margin-bottom: 4rem; }
   .home__start {
     font-size: 1.4rem;
     margin-bottom: 2rem;
@@ -273,7 +273,7 @@ svg {
 
 .about {
   min-height: 80vh;
-  max-width: 90rem;
+  max-width: 80%;
   display: grid;
   grid-template-columns: minmax(max-content, min-content);
   align-content: center;
@@ -283,26 +283,123 @@ svg {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
+  justify-content: flex-start;
   position: relative;
   margin: 10px 0px 40px;
   width: 100%;
-  font-size: clamp(26px, 5vw, var(--fz-heading));
-  white-space: nowrap; }
+  font-size: clamp(3rem, 5vw, 3.2rem);
+  white-space: nowrap;
+  color: #e6f1ff; }
   .heading__number::before {
+    display: block;
+    top: 0;
     position: relative;
     bottom: 4px;
-    content: "01";
+    content: "01.";
     margin-right: 10px;
     color: #64ffda;
     font-family: "Roboto Mono", "Roboto";
-    font-size: 20rem;
+    font-size: clamp(2rem, 3vw, 2.5rem);
     font-weight: 400; }
   .heading__number::after {
     content: "";
     display: block;
     position: relative;
-    top: -5px;
+    top: 2px;
     width: 300px;
     height: 1px;
-    margin-left: 20px;
+    margin-left: 2rem;
+    opacity: 0.3;
     background-color: #a8b2d1; }
+
+.info {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 5rem; }
+  .info img[alt=""],
+  .info img:not([alt]) {
+    filter: blur(5px); }
+  .info p {
+    margin-bottom: 2rem; }
+  .info__text {
+    color: #8892b0;
+    font-size: 1.3rem; }
+  .info__photo--wrapper {
+    width: 100%;
+    border-radius: 0.7rem;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    display: block;
+    position: relative; }
+    .info__photo--wrapper::before, .info__photo--wrapper::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1); }
+    .info__photo--wrapper::before {
+      top: 0px;
+      left: 0px;
+      background-color: #0a192f;
+      mix-blend-mode: screen; }
+    .info__photo--wrapper__gatsby {
+      overflow: hidden; }
+    .info__photo--wrapper__gatsby,
+    .info__photo--wrapper .img {
+      width: 100%;
+      max-width: 100%;
+      vertical-align: middle;
+      border-radius: 0.7rem; }
+      .info__photo--wrapper__gatsby-constrained,
+      .info__photo--wrapper .img-constrained {
+        display: inline-block; }
+      .info__photo--wrapper__gatsby img,
+      .info__photo--wrapper .img img {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        object-fit: cover; }
+      .info__photo--wrapper__gatsby::before, .info__photo--wrapper__gatsby::after,
+      .info__photo--wrapper .img::before,
+      .info__photo--wrapper .img::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.4rem;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1); }
+      .info__photo--wrapper__gatsby:after,
+      .info__photo--wrapper .img:after {
+        border: 2px solid #64ffda;
+        top: 20px;
+        left: 20px;
+        z-index: -1; }
+  .info__skill-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 1rem;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+    margin: 2rem 0 0; }
+    .info__skill-list li::before {
+      content: "";
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+      margin-right: 0.7rem; }
+      @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+        .info__skill-list li::before {
+          background-color: #64ffda;
+          -webkit-mask-image: url("../../img/play.svg");
+          -webkit-mask-size: cover;
+          mask-image: url("../../img/play.svg");
+          mask-size: cover; } }
