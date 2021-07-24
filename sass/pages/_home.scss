@@ -8,7 +8,7 @@
     -webkit-box-pack: center;
 
     display: grid;
-    grid-template-columns: max-content;
+    grid-template-columns: minmax(max-content, min-content);
     align-content: center;
     justify-items: start;
 

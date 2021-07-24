@@ -31,7 +31,32 @@
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: $slate;
+    font-family: $font-robo;
     margin-bottom: $mb-md;
+
+    &__link:visited,
+    &__link:active {
+        text-decoration: none;
+        color: $color-secondary;
+
+        & span {
+            margin-left: 3px;
+            transition: margin-left 0.2s;
+        }
+    }
+
+    &__link:hover,
+    &__link:active {
+        border-radius: 3px;
+
+        span {
+            margin-left: 8px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
 }
