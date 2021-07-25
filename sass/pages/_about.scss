@@ -67,13 +67,10 @@
 
     &__photo {
         grid-column: 2 / 3;
-        justify-content: center;
-        align-items: center;
+        margin-top: 4rem;
 
         &--wrapper {
             border-radius: 0.7rem;
-            box-shadow: 0 10px 30px -15px $navy-shadow;
-            background-image: rgba($color-secondary, 0.7);
             transition: $transition;
             display: block;
             position: relative;
@@ -83,7 +80,7 @@
                 content: "";
                 display: block;
                 position: absolute;
-                width: 75%;
+                width: 80%;
                 height: 100%;
                 border-radius: 1rem;
                 transition: $transition;
@@ -103,7 +100,7 @@
             &__gatsby,
             .img {
                 width: 100%;
-                max-width: 75%;
+                max-width: 80%;
                 vertical-align: middle;
                 border-radius: 0.7rem;
 
@@ -115,8 +112,8 @@
                     cursor: pointer;
                     background-image: linear-gradient(
                         to right,
-                        rgba($color-secondary),
-                        rgba($color-secondary)
+                        rgba($color-secondary, 0.7),
+                        rgba($color-secondary, 0.7)
                     );
                 }
 
@@ -137,7 +134,7 @@
                     content: "";
                     display: block;
                     position: absolute;
-                    width: 75%;
+                    width: 80%;
                     height: 100%;
                     border-radius: 0.4rem;
                     transition: $transition;

@@ -1,25 +1,33 @@
 .heading__main {
     margin: 0;
-    font-size: clamp(40px, 8vw, 80px);
+    font-size: clamp(4rem, 8vw, 8rem);
 
     &-primary {
         font-weight: 700;
         color: $white;
         font-family: $font-primary;
         line-height: 1.1;
-        font-size: clamp(40px, 8vw, 80px);
+        font-size: clamp(4rem, 8vw, 8rem);
         display: block;
         margin-bottom: $mb-sl;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: clamp(3rem, 7vw, 6rem);
+        }
     }
 
     &-secondary {
         color: $slate;
         line-height: 0.9;
-        font-size: clamp(40px, 8vw, 80px);
+        font-size: clamp(4rem, 8vw, 8rem);
         display: block;
         font-family: $font-primary;
         margin-bottom: $mb-sl;
         font-weight: 700;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: clamp(3rem, 6.5vw, 6rem);
+        }
     }
 }
 
@@ -35,6 +43,10 @@
     color: $slate;
     font-family: $font-robo;
     margin-bottom: $mb-md;
+
+    &__home-text {
+        margin-bottom: 1rem;
+    }
 
     &__link:visited,
     &__link:active {

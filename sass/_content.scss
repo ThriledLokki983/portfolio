@@ -28,13 +28,15 @@
 }
 
 .content {
+    width: 100%;
+    overflow: hidden;
     display: grid;
     align-content: center;
     justify-items: center;
 
     grid-template-columns: 1fr;
     grid-column: 2/3;
-    padding: 10rem auto;
+    // padding: 10rem auto;
 }
 
 .left {
