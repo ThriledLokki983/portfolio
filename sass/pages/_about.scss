@@ -49,29 +49,31 @@
 
 .info {
     display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 5rem;
-
-    img[alt=""],
-    img:not([alt]) {
-        filter: blur(5px);
-    }
+    grid-template-columns: minmax(auto-fit, min-content) minmax(
+            auto-fit,
+            min-content
+        );
+    gap: 2rem;
 
     & p {
         margin-bottom: 2rem;
     }
 
     &__text {
+        grid-column: 1 / 2;
         color: $slate;
         font-size: 1.3rem;
     }
 
     &__photo {
+        grid-column: 2 / 3;
+        justify-content: center;
+        align-items: center;
+
         &--wrapper {
-            // border: 1px solid $color-secondary;
-            width: 100%;
             border-radius: 0.7rem;
             box-shadow: 0 10px 30px -15px $navy-shadow;
+            background-image: rgba($color-secondary, 0.7);
             transition: $transition;
             display: block;
             position: relative;
@@ -81,7 +83,7 @@
                 content: "";
                 display: block;
                 position: absolute;
-                width: 100%;
+                width: 75%;
                 height: 100%;
                 border-radius: 1rem;
                 transition: $transition;
@@ -101,12 +103,21 @@
             &__gatsby,
             .img {
                 width: 100%;
-                max-width: 100%;
+                max-width: 75%;
                 vertical-align: middle;
                 border-radius: 0.7rem;
 
                 &-constrained {
                     display: inline-block;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background-image: linear-gradient(
+                        to right,
+                        rgba($color-secondary),
+                        rgba($color-secondary)
+                    );
                 }
 
                 img {
@@ -126,7 +137,7 @@
                     content: "";
                     display: block;
                     position: absolute;
-                    width: 100%;
+                    width: 75%;
                     height: 100%;
                     border-radius: 0.4rem;
                     transition: $transition;
@@ -134,8 +145,8 @@
 
                 &:after {
                     border: 2px solid $color-secondary;
-                    top: 20px;
-                    left: 20px;
+                    top: 1.5rem;
+                    left: 1.5rem;
                     z-index: -1;
                 }
             }

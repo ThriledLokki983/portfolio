@@ -314,74 +314,80 @@ svg {
 
 .info {
   display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 5rem; }
-  .info img[alt=""],
-  .info img:not([alt]) {
-    filter: blur(5px); }
+  grid-template-columns: minmax(auto-fit, min-content) minmax(auto-fit, min-content);
+  gap: 2rem; }
   .info p {
     margin-bottom: 2rem; }
   .info__text {
+    grid-column: 1 / 2;
     color: #8892b0;
     font-size: 1.3rem; }
-  .info__photo--wrapper {
-    width: 100%;
-    border-radius: 0.7rem;
-    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    display: block;
-    position: relative; }
-    .info__photo--wrapper::before, .info__photo--wrapper::after {
-      content: "";
+  .info__photo {
+    grid-column: 2 / 3;
+    justify-content: center;
+    align-items: center; }
+    .info__photo--wrapper {
+      border-radius: 0.7rem;
+      box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+      background-image: rgba(100, 255, 218, 0.7);
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
       display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 1rem;
-      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1); }
-    .info__photo--wrapper::before {
-      top: 0px;
-      left: 0px;
-      background-color: #0a192f;
-      mix-blend-mode: screen; }
-    .info__photo--wrapper__gatsby {
-      overflow: hidden; }
-    .info__photo--wrapper__gatsby,
-    .info__photo--wrapper .img {
-      width: 100%;
-      max-width: 100%;
-      vertical-align: middle;
-      border-radius: 0.7rem; }
-      .info__photo--wrapper__gatsby-constrained,
-      .info__photo--wrapper .img-constrained {
-        display: inline-block; }
-      .info__photo--wrapper__gatsby img,
-      .info__photo--wrapper .img img {
-        bottom: 0;
-        height: 100%;
-        left: 0;
-        margin: 0;
-        padding: 0;
-        right: 0;
-        top: 0;
-        width: 100%;
-        object-fit: cover; }
-      .info__photo--wrapper__gatsby::before, .info__photo--wrapper__gatsby::after,
-      .info__photo--wrapper .img::before,
-      .info__photo--wrapper .img::after {
+      position: relative; }
+      .info__photo--wrapper::before, .info__photo--wrapper::after {
         content: "";
         display: block;
         position: absolute;
-        width: 100%;
+        width: 75%;
         height: 100%;
-        border-radius: 0.4rem;
+        border-radius: 1rem;
         transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1); }
-      .info__photo--wrapper__gatsby:after,
-      .info__photo--wrapper .img:after {
-        border: 2px solid #64ffda;
-        top: 20px;
-        left: 20px;
-        z-index: -1; }
+      .info__photo--wrapper::before {
+        top: 0px;
+        left: 0px;
+        background-color: #0a192f;
+        mix-blend-mode: screen; }
+      .info__photo--wrapper__gatsby {
+        overflow: hidden; }
+      .info__photo--wrapper__gatsby,
+      .info__photo--wrapper .img {
+        width: 100%;
+        max-width: 75%;
+        vertical-align: middle;
+        border-radius: 0.7rem; }
+        .info__photo--wrapper__gatsby-constrained,
+        .info__photo--wrapper .img-constrained {
+          display: inline-block; }
+        .info__photo--wrapper__gatsby:hover,
+        .info__photo--wrapper .img:hover {
+          cursor: pointer;
+          background-color: red; }
+        .info__photo--wrapper__gatsby img,
+        .info__photo--wrapper .img img {
+          bottom: 0;
+          height: 100%;
+          left: 0;
+          margin: 0;
+          padding: 0;
+          right: 0;
+          top: 0;
+          width: 100%;
+          object-fit: cover; }
+        .info__photo--wrapper__gatsby::before, .info__photo--wrapper__gatsby::after,
+        .info__photo--wrapper .img::before,
+        .info__photo--wrapper .img::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 75%;
+          height: 100%;
+          border-radius: 0.4rem;
+          transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1); }
+        .info__photo--wrapper__gatsby:after,
+        .info__photo--wrapper .img:after {
+          border: 2px solid #64ffda;
+          top: 1.5rem;
+          left: 1.5rem;
+          z-index: -1; }
   .info__skill-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
