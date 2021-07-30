@@ -1,8 +1,16 @@
-@import "base";
-@import "typography";
-@import "features";
-@import "header";
-@import "sides";
-@import "content";
+@import "utils";
+
+@import "abstract/animations";
+@import "abstract/mixins";
+
+@import "layout/layout";
+@import "layout/base";
+
+@import "features/sides";
+@import "features/typography";
+@import "features/btn";
+
+@import "pages/header";
 @import "pages/home";
-@import "pages/about";
+@import "pages/about-me";
+@import "pages/experience";
