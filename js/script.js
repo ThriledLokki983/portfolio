@@ -27,4 +27,4 @@ const logo = document.querySelector(".intro__container");
 
 setTimeout(() => {
     logo.classList.add("hidden");
-}, 4000);
+}, 3000);

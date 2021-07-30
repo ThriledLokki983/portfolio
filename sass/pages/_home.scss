@@ -46,13 +46,11 @@
     }
 }
 
-.logo {
-    &__container {
-        width: max-content;
-        max-width: 100px;
-        align-items: center;
-        margin: 45vh auto;
-    }
+.logo__container {
+    width: max-content;
+    max-width: 100px;
+    align-items: center;
+    margin: 45vh auto;
 }
 
 .intro {
