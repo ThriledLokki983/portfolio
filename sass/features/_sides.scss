@@ -1,4 +1,5 @@
 .right {
+    padding: 5px;
     width: 4rem;
     position: fixed;
     bottom: 0;
@@ -7,12 +8,12 @@
     z-index: 9;
     color: $light-slate;
     overflow: hidden;
-    // display: flex;
-    // align-items: center;
-    // overflow: hidden;
-    grid-column: 3 / 4;
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $bp-smallest) {
+        display: none;
+    }
+
+    @media only screen and (max-width: $bp-large) {
         display: none;
     }
 }
@@ -39,7 +40,7 @@
         content: "";
         display: block;
         width: 0.5px;
-        height: 20rem;
+        height: 17rem;
         margin: 0 auto;
         background-color: $light-slate;
     }
@@ -54,6 +55,7 @@
 }
 
 .left {
+    padding: 5px;
     width: 4rem;
     position: fixed;
     bottom: 0;
@@ -64,9 +66,12 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    grid-column: 1 / 2;
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $bp-smallest) {
+        display: none;
+    }
+
+    @media only screen and (max-width: $bp-large) {
         display: none;
     }
 }
@@ -87,7 +92,7 @@
         content: "";
         display: block;
         width: 0.5px;
-        height: 20rem;
+        height: 17rem;
         margin: 1.5rem auto 0 auto;
         align-self: center;
         background-color: $light-slate;

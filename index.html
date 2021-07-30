@@ -2,19 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-        <link
-            href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i"
-            rel="stylesheet"
-        />
         <link rel="stylesheet" href="css/style.css" />
-        <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.png" /> -->
-
+        <!-- <link rel="shortcut icon" type="image/png" href="img/fav-3.png" /> -->
         <title>nimohgideon</title>
     </head>
-    <body class="main__body">
+    <body>
         <div class="intro__container">
             <div class="logo__container">
                 <svg
@@ -55,242 +49,469 @@
                 </svg>
             </div>
         </div>
-        <div class="header">
-            <div class="header__logo-box">
-                <svg
-                    class="header__logo-box--logo"
-                    id="hexagon"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                >
-                    <g>
-                        <g
-                            class="header__logo-text"
-                            id="G"
-                            transform="translate(36, 33)"
-                            fill="#64FFDA"
-                            style="opacity: 0"
-                            font-family="Calibre-Medium, Calibre, Josefin"
-                            font-size="50"
-                            font-weight="500"
-                            letter-spacing="4.16666603"
+        
+        <div class="base">
+            <div class="page__layout">
+                <header class="header">
+                    <div class="header__logo-box">
+                        <svg
+                            class="header__logo-box--logo"
+                            id="hexagon"
+                            viewBox="0 0 100 100"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
                         >
-                            <text>
-                                <tspan x="-3" y="32">G</tspan>
-                            </text>
-                        </g>
-                        <path
-                            stroke="#64FFDA"
-                            stroke-width="5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M 50, 5
+                            <g>
+                                <g
+                                    class="header__logo-text"
+                                    id="G"
+                                    transform="translate(36, 33)"
+                                    fill="#64FFDA"
+                                    style="opacity: 1"
+                                    font-family="Calibre-Medium, Calibre, Josefin"
+                                    font-size="50"
+                                    font-weight="500"
+                                    letter-spacing="4.16666603"
+                                >
+                                    <text>
+                                        <tspan
+                                            class="header__logo-box--text"
+                                            x="-3"
+                                            y="32"
+                                        >
+                                            G
+                                        </tspan>
+                                    </text>
+                                </g>
+                                <path
+                                    stroke="#64FFDA"
+                                    stroke-width="5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M 50, 5
                  L 11, 27
                  L 11, 72
                  L 50, 95
                  L 89, 73
                  L 89, 28 z"
-                        />
-                    </g>
-                </svg>
-            </div>
-            <nav class="header__nav">
-                <ul class="header__nav--list">
-                    <li class="header__nav--item">
-                        <a href="#" class="header__nav--link"
-                            ><span>01.</span> About</a
-                        >
-                    </li>
-                    <li class="header__nav--item">
-                        <a href="#" class="header__nav--link"
-                            ><span>02.</span> Experience</a
-                        >
-                    </li>
-                    <li class="header__nav--item">
-                        <a href="#" class="header__nav--link"
-                            ><span>03.</span> Project</a
-                        >
-                    </li>
-                    <li class="header__nav--item">
-                        <a href="#" class="header__nav--link"
-                            ><span>04.</span> Contact</a
-                        >
-                    </li>
-                </ul>
-            </nav>
-            <button class="header__btn">Resume</button>
-        </div>
-        <div class="main">
-            <div class="left">
-                <ul orientation="left" class="side__social">
-                    <li class="side__social--item">
-                        <a
-                            href="https://github.com/ThriledLokki983"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="GitHub"
-                            ><svg class="side__social--item icon">
-                                <use
-                                    xlink:href="img/sprites.svg#icon-github"
-                                ></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="side__social--item">
-                        <a
-                            href="https://www.instagram.com/ogidi78/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Instagram"
-                        >
-                            <svg class="side__social--item icon">
-                                <use
-                                    xlink:href="img/sprites.svg#icon-instagram"
-                                ></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="side__social--item">
-                        <a
-                            href="https://twitter.com/NimohAgyin"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Twitter"
-                        >
-                            <svg class="side__social--item icon">
-                                <use
-                                    xlink:href="img/sprites.svg#icon-twitter"
-                                ></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="side__social--item">
-                        <a
-                            href="https://www.linkedin.com/in/gideon-nimoh/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="LinkedIn"
-                        >
-                            <svg class="side__social--item icon">
-                                <use
-                                    xlink:href="img/sprites.svg#icon-linkedin"
-                                ></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="side__social--item">
-                        <a
-                            href="https://codepen.io/ThriledLokki983"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <svg class="side__social--item icon">
-                                <use
-                                    xlink:href="img/sprites.svg#icon-codepen"
-                                ></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="right">
-                <div orientation="right" class="email">
-                    <a class="mail" href="mailto:hello@nimoh.io"
-                        >hello@nimoh.io</a
-                    >
-                </div>
-            </div>
-            <div class="content">
-                <div class="warning">
-                    Please Note! - this website is still underdevelopment
-                </div>
-                <section class="home">
-                    <span class="home__start">Hi, my name is</span>
-                    <h2 class="heading__main-primary">Gideon Nimoh.</h2>
-                    <h2 class="heading__main-secondary">
-                        FullStack web developer.
-                    </h2>
-                    <p class="home__text paragraph">
-                        I'm a software developer with special interest in
-                        building (and occasionally designing) things for the web
-                        that comes with it a great digital experience.
-                        Currently, I'm focused on sharpening my Front-End skills
-                        <a
-                            class="paragraph__link"
-                            href="https://wiersma-ict.nl
-                        "
-                            >@wiersma-ict<span>&rarr;</span></a
-                        >
-                    </p>
-
-                    <button class="header__btn home__btn">Get In Touch</button>
-                </section>
-
-                <section class="about">
-                    <h2 class="heading__number">About Me</h2>
-                    <div class="info">
-                        <div class="info__text">
-                            <p class="paragraph">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Vero odio eligendi ullam nulla
-                                nam qui maiores quidem officiis veritatis
-                                distinctio quibusdam vitae facere praesentium
-                                tempora sequi ea, ducimus quasi laborum?
-                            </p>
-                            <p class="paragraph">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Vero odio eligendi ullam nulla
-                                nam qui maiores quidem officiis veritatis
-                                distinctio quibusdam vitae facere praesentium
-                                tempora sequi ea, ducimus quasi laborum?
-                            </p>
-                            <p class="paragraph">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit.
-                            </p>
-                            <ul class="info__skill-list">
-                                <li>JavaScript (ES6+)</li>
-                                <li>Python</li>
-                                <li>React</li>
-                                <li>Django</li>
-                                <li>Node.js</li>
-                                <li>Flask</li>
-                                <li>JAVA</li>
-                                <li>HTML5/CSS3</li>
-                            </ul>
-                        </div>
-                        <div class="info__photo">
-                            <figure class="info__photo--wrapper">
-                                <div
-                                    class="
-                                        info__photo--wrapper__gatsby
-                                        info__photo--wrapper__gatsby-constrained
-                                        img
-                                    "
-                                >
-                                    <div
-                                        style="max-width: 500px; display: block"
-                                    >
-                                        <img
-                                            role="presentation"
-                                            area-hidden="true"
-                                            src="img/self-1a.jpg"
-                                            alt="Me"
-                                            style="
-                                                max-width: 100%;
-                                                display: block;
-                                                position: static;
-                                            "
-                                        />
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
+                                />
+                            </g>
+                        </svg>
                     </div>
-                </section>
+                    <nav class="header__nav">
+                        <ul class="header__nav--list">
+                            <li class="header__nav--item">
+                                <a href="#" class="header__nav--link"
+                                    ><span>01.</span> About</a
+                                >
+                            </li>
+                            <li class="header__nav--item">
+                                <a href="#" class="header__nav--link"
+                                    ><span>02.</span> Experience</a
+                                >
+                            </li>
+                            <li class="header__nav--item">
+                                <a href="#" class="header__nav--link"
+                                    ><span>03.</span> Project</a
+                                >
+                            </li>
+                            <li class="header__nav--item">
+                                <a href="#" class="header__nav--link"
+                                    ><span>04.</span> Contact</a
+                                >
+                            </li>
+                            <button class="header__btn">Resume</button>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="left">
+                    <ul orientation="left" class="side__social">
+                        <li class="side__social--item">
+                            <a
+                                href="https://github.com/ThriledLokki983"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="GitHub"
+                                ><svg class="side__social--item icon">
+                                    <use
+                                        xlink:href="img/sprites.svg#icon-github"
+                                    ></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="side__social--item">
+                            <a
+                                href="https://www.instagram.com/ogidi78/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram"
+                            >
+                                <svg class="side__social--item icon">
+                                    <use
+                                        xlink:href="img/sprites.svg#icon-instagram"
+                                    ></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="side__social--item">
+                            <a
+                                href="https://twitter.com/NimohAgyin"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Twitter"
+                            >
+                                <svg class="side__social--item icon">
+                                    <use
+                                        xlink:href="img/sprites.svg#icon-twitter"
+                                    ></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="side__social--item">
+                            <a
+                                href="https://www.linkedin.com/in/gideon-nimoh/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn"
+                            >
+                                <svg class="side__social--item icon">
+                                    <use
+                                        xlink:href="img/sprites.svg#icon-linkedin"
+                                    ></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="side__social--item">
+                            <a
+                                href="https://codepen.io/ThriledLokki983"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg class="side__social--item icon">
+                                    <use
+                                        xlink:href="img/sprites.svg#icon-codepen"
+                                    ></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div orientation="right" class="email">
+                        <a class="mail" href="mailto:hello@nimoh.io"
+                            >hello@nimoh.io</a
+                        >
+                    </div>
+                </div>
+                <main class="content">
+                    <section class="home">
+                        <span class="home__start">Hi, my name is</span>
+                        <h2 class="heading__main-primary">Gideon Nimoh.</h2>
+                        <h2 class="heading__main-secondary">
+                            FullStack web developer.
+                        </h2>
+                        <p class="home__text paragraph">
+                            I'm a software developer with special interest in
+                            building (and occasionally designing) things for the
+                            web that comes with it a great digital experience.
+                            Currently, I'm focused on sharpening my Front-End
+                            skills
+                            <a
+                                class="paragraph__link"
+                                href="https://wiersma-ict.nl
+                        "
+                                >@wiersma-ict<span>&rarr;</span></a
+                            >
+                        </p>
+
+                        <button class="header__btn home__btn">
+                            Get In Touch
+                        </button>
+                    </section>
+                    <section class="about">
+                        <h2 class="heading__number">About Me</h2>
+                        <div class="about__info">
+                            <div class="about__info--text">
+                                <p class="about__info--text-1 paragraph">
+                                    Hello! My name is Gideon and I enjoy creating things that live on the internet. 
+                                    My interest in web development started back in 2012 where out of curiosity I decided to take 
+                                    a private class in WordPress — turns out the many trial and errors on building a free BlogPage
+                                    really brought out something I wanted to spend my time on Software Development!
+                                </p>
+                                <p class="about__info--text-1 paragraph">
+                                    Fast-forward to today, after a number of self-taught courses and
+                                    following many other courses online, I've had the privilege of working with ASUS Tech, and 
+                                    currently @Wiersma-ict in NL. The goal is to start up my own company some day and have 
+                                    some permanent clients I develop softwares/Applications for.
+                                </p>
+                                <p class="about__info--text-1 paragraph">
+                                    Here are a few technologies I've been working with recently:
+                                </p>
+                                <ul class="about__info__skill-list">
+                                    <li>JavaScript (ES6+)</li>
+                                    <li>Python</li>
+                                    <li>React</li>
+                                    <li>Django</li>
+                                    <li>Node.js</li>
+                                    <li>Flask</li>
+                                    <li>JAVA</li>
+                                    <li>HTML5/CSS3</li>
+                                </ul>
+                            </div>
+                            <div class="about__info--photo">
+                                <figure class="about__info--photo--wrapper">
+                                    <div
+                                        class="
+                                            about__info--photo--wrapper__gatsby
+                                            about__info--photo--wrapper__gatsby-constrained
+                                            img
+                                        "
+                                    >
+                                        <div
+                                            style="
+                                                max-width: 500px;
+                                                display: block;
+                                            "
+                                        >
+                                            <img
+                                                role="presentation"
+                                                area-hidden="true"
+                                                src="img/self-1a.jpg"
+                                                alt="Me"
+                                                style="
+                                                    max-width: 100%;
+                                                    display: block;
+                                                    position: static;
+                                                "
+                                            />
+                                        </div>
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="experience">
+                        <div class="experience__head">
+                            <div class="experience__head--text">
+                                Front-End, Back-End & Business Analyst
+                            </div>
+                            <p class="paragraph experience__head-paragraph">
+                                Since fully beginning my journey as a freelance software developer about 3 years ago, 
+                                I've done a number of self-taught courses from Havard-CS50x through to other many courses 
+                                on Udemy, consulted for startups, and collaborated remotely with talented colleagues
+                                people to create digital products for both business and consumer use. 
+                                I'm quietly confident, naturally curious, and perpetually working on improving 
+                                my problem solving skills as well keeping up with the latest cutting edge technologies.
+                            </p>
+                        </div>
+                        <div class="experience__content">
+                            <div class="experience__content-1">
+                                <div class="experience__content-1__icon-box">
+                                    <svg class="experience__content-1__icon">
+                                        <use
+                                            xlink:href="img/sprites.svg#icon-browser"
+                                        ></use>
+                                    </svg>
+                                    <span class="experience__content-1__title"
+                                        >Front-end Developer</span
+                                    >
+                                </div>
+                                <div class="experience__content-1--intro">
+                                    <p class="paragraph">
+                                        I value simple but well thought-through
+                                        web content structure, which indeed has
+                                        clean design patterns, and also
+                                        interractive for the users.
+                                    </p>
+
+                                    <h4 class="heading__main-tertiary">
+                                        Things I enjoy designing:
+                                    </h4>
+                                    <ul class="item__lists-enjoy">
+                                        <li class="item__lists-enjoy--list">
+                                            Mobile
+                                        </li>
+                                        <li class="item__lists-enjoy--list">
+                                            Web
+                                        </li>
+                                        <li class="item__lists-enjoy--list">
+                                            Apps
+                                        </li>
+                                    </ul>
+
+                                    <h4 class="heading__main-tertiary">
+                                        Design Tools:
+                                    </h4>
+                                    <ul class="item__lists-tools">
+                                        <li class="item__lists-tools--list">
+                                            HTML5/CSS3
+                                        </li>
+                                        <li class="item__lists-tools--list">
+                                            Sass
+                                        </li>
+                                        <li class="item__lists-tools--list">
+                                            Pug
+                                        </li>
+                                        <li class="item__lists-tools--list">
+                                            JavaScript(ES6+)
+                                        </li>
+                                        <li class="item__lists-tools--list">
+                                            CodePen
+                                        </li>
+                                        <li class="item__lists-tools--list">
+                                            Figma
+                                        </li>
+                                        <li class="item__lists-tools--list">
+                                            WordPress
+                                        </li>
+                                        <li class="item__lists-tools--list">
+                                            Pen & Paper
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="experience__content-2">
+                                <div class="experience__content-2__icon-box">
+                                    <svg class="experience__content-2__icon">
+                                        <use
+                                            xlink:href="img/sprites.svg#icon-code"
+                                        ></use>
+                                    </svg>
+                                    <span class="experience__content-2__title"
+                                        >Back-end Developer</span
+                                    >
+                                    
+                                </div>
+                                <div class="experience__content-2--intro">
+                                    <p class="paragraph">
+                                        I like to code things from scratch, and enjoy bringing ideas to life on the internet.
+                                    </p>
+
+                                    <h4 class="heading__main-tertiary">
+                                        Languages I speak:
+                                    </h4>
+                                    <ul
+                                        class="experience__content-2__lists"
+                                    >
+                                        <li class="item__lists-enjoy--list">
+                                            JS-(ES6+)
+                                        </li>
+                                        <li class="item__lists-enjoy--list">Python</li>
+                                            
+                                        </li>
+                                        <li class="item__lists-enjoy--list">
+                                            JAVA
+                                        </li>
+                                        <li class="item__lists-enjoy--list">
+                                            Node.js
+                                        </li>
+                                        <li class="item__lists-enjoy--list">
+                                            Django
+                                        </li>
+                                        <li class="item__lists-enjoy--list">
+                                            C
+                                        </li>
+                                        <li class="item__lists-enjoy--list">
+                                            React
+                                        </li>
+                                        <li class="item__lists-enjoy--list">
+                                            Flask
+                                        </li>
+                                        <li class="item__lists-enjoy--list">
+                                           SQL/NoSQL
+                                        </li>
+                                    </ul>
+
+                                    <h4 class="heading__main-tertiary">
+                                        Dev Tools:
+                                    </h4>
+                                    <ul class="item__lists-tools">
+                                        <li class="item__lists-tools--list">
+                                            Atom
+                                        </li>
+                                        <li class="item__lists-tools--list">
+                                            Visual Studio Code
+                                        </li>
+                                        <li class="item__lists-tools--list">
+                                            Terminal
+                                        </li>
+                                        <li class="item__lists-tools--list">
+                                            GitHub
+                                        </li>
+                                        <li class="item__lists-tools--list">
+                                            PostMan / Compass
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="experience__content-3">
+                                <div class="experience__content-3__icon-box">
+                                    <svg class="experience__content-3__icon">
+                                        <use
+                                            xlink:href="img/sprites.svg#icon-document-code"
+                                        ></use>
+                                    </svg>
+                                    <span class="experience__content-3__title"
+                                        >Software Analyst</span
+                                    >
+                                </div>
+                                <div class="experience__content-3--intro">
+                                    <p class="paragraph">
+                                        I have worked as an Application support Analyst with ASUS Tech for almost 2-years, studied all 
+                                        the systems developed and suggested improvements to these systems. Based on request by our Global
+                                        users, I helped to clarify and come up with Design and Specification for the developers to implement. 
+                                        here, I have gunnered a lot of experiences of what users expect with thier request for systems they 
+                                        make use of everyday.
+                                    </p>
+
+                                    <h4 class="heading__main-tertiary">
+                                        Where I have Worked:
+                                    </h4>
+                                    <ul class="item__lists-enjoy">
+                                        <li class="item__lists-enjoy--list">
+                                            ASUS Technologies (2-years)
+                                        </li>
+                                        <li class="item__lists-enjoy--list">
+                                            University of Groningen (6-months)
+                                        </li>
+                                        <li class="item__lists-enjoy--list">
+                                            University of Ghana (1-yr)
+                                        </li>
+                                    </ul>
+
+                                    <h4 class="heading__main-tertiary">
+                                        Tools Worked with:
+                                    </h4>
+                                    <ul class="item__lists-tools">
+                                        <li class="item__lists-tools--list">
+                                            MySQL
+                                        </li>
+                                        <li class="item__lists-tools--list">
+                                            phpMyAdmin
+                                        </li>
+                                        <li class="item__lists-tools--list">
+                                            phpStorm
+                                        </li>
+                                        <li class="item__lists-tools--list">
+                                            Microsoft SQL Server
+                                        </li>
+                                        <li class="item__lists-tools--list">
+                                            RStudio
+                                        </li>
+                                        <!-- 
+                                        <li class="item__lists-tools--list">
+                                            WordPress
+                                        </li>
+                                        <li class="item__lists-tools--list">
+                                            Pen & Paper
+                                        </li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
             </div>
         </div>
     </body>

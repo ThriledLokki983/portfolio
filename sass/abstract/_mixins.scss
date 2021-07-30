@@ -1,0 +1,68 @@
+@mixin icon-style {
+    margin-top: 3rem;
+    width: 4rem;
+    height: 4rem;
+    fill: $green;
+    stroke-width: 15rem;
+    margin-bottom: 2.5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        margin-top: 2rem;
+        width: 8rem;
+        height: 8rem;
+        fill: $green;
+        stroke-width: 15rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+@mixin icon-box-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+@mixin intro-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // height: 60vh;
+}
+
+@mixin content-style {
+    display: grid;
+    grid-template-columns: minmax(auto-fit, max-content);
+    grid-template-rows: minmax(auto-fit, max-content),
+        repeat(2, minmax(auto-fit, max-content));
+
+    // display: grid;
+    // grid-template-columns: min-content 1fr;
+    // grid-template-rows: repeat(2);
+}
+
+@mixin title-style {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: $font-robo-mono;
+    color: $white;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+@mixin list-style {
+    list-style: none;
+    font-size: 1.7rem;
+    color: $light-slate;
+    font-weight: 300;
+    font-family: $font-robo;
+}
+
+@mixin large-style {
+    border: 1px solid rgba($slate, 0.5);
+    border-radius: 0.5rem;
+    margin-bottom: 5rem;
+    background-color: rgba($dark-slate, 0.9);
+}

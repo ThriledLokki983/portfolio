@@ -1,0 +1,17 @@
+.left {
+    grid-column: left-start / left-end;
+    // grid-row: 1 / -4;
+}
+
+.right {
+    grid-column: main-end / right-end;
+    // grid-row: 1 / -4;
+}
+
+.content {
+    grid-column: main-start / main-end;
+
+    display: grid;
+    grid-template-columns: minmax(min-content, 88vw);
+    justify-content: center;
+}

@@ -1,0 +1,132 @@
+.header {
+    grid-column: left-start / right-end;
+    padding: 1rem;
+    box-shadow: $shadow-dark;
+    position: relative;
+
+    &__checkbox {
+        display: none;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+
+    &__logo-box {
+        position: relative;
+        width: 20%;
+        height: 20%;
+        animation: moveInLeft 1.2s ease-out 3s;
+        // animation-delay: 3s;
+
+        &--logo {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__nav {
+        justify-content: end;
+        gap: 1rem;
+        padding-right: 5rem;
+
+        &--list {
+            gap: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            animation: moveInRight 1.2s ease-out 3s;
+        }
+
+        &--item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.3rem;
+
+            & span {
+                margin-right: 0.4rem;
+                color: $green;
+                font-family: $font-robo-mono;
+            }
+        }
+
+        &--link:link,
+        &--link:visited {
+            text-decoration: none;
+            text-transform: capitalize;
+            display: block;
+            padding: 0.5rem 1.5rem;
+            color: $white;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    svg {
+        width: 100%;
+        // margin: 0 auto;
+        // fill: none;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        padding: 1.5rem 1rem;
+
+        &__logo-box {
+            position: relative;
+            width: 20%;
+            height: 20%;
+            animation: moveInLeft 1.2s ease-out 3s;
+
+            &--logo {
+                width: 3rem;
+                height: 3rem;
+                margin-left: 3rem;
+            }
+        }
+
+        &__nav--list {
+            display: none;
+        }
+
+        &__nav {
+            height: 100%;
+            width: 100%;
+            animation: moveInRight 1.2s ease-out 3s;
+
+            &:before {
+                content: "";
+                display: inline-block;
+                height: 3rem;
+                width: 3rem;
+                margin-left: 50rem;
+                cursor: pointer;
+
+                @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+                    background-color: $green;
+                    -webkit-mask-image: url(../img/menu.svg);
+                    -webkit-mask-size: cover;
+                    mask-image: url(../img/menu.svg);
+                    mask-size: cover;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 2rem;
+        &__logo-box {
+            cursor: pointer;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            animation: moveInLeft 1.2s ease-out 3s;
+
+            &--logo {
+                width: 4rem;
+                height: 4rem;
+                // margin-left: 10rem;
+            }
+        }
+    }
+}
