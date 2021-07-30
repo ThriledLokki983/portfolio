@@ -45,7 +45,6 @@
 
 @mixin title-style {
     font-size: 3rem;
-    font-weight: bold;
     font-family: $font-robo-mono;
     color: $white;
     margin-bottom: 2rem;
@@ -64,5 +63,5 @@
     border: 1px solid rgba($slate, 0.5);
     border-radius: 0.5rem;
     margin-bottom: 5rem;
-    background-color: rgba($dark-slate, 0.9);
+    background-color: rgba($dark-navy, 0.9);
 }

@@ -45,11 +45,11 @@
         max-height: 80vh;
         align-self: center;
         border-radius: 0.7rem;
-        background-color: rgba($dark-slate, 0.9);
+        background-color: rgba($navy, 0.85);
         box-shadow: $shadow-dark;
 
         position: absolute;
-        top: 30rem;
+        top: 33rem;
         border: 1px solid rgba($slate, 0.5);
 
         display: grid;
@@ -79,6 +79,7 @@
             p {
                 font-weight: 400;
                 margin-bottom: 7rem;
+                text-align: justify;
             }
         }
 
@@ -107,6 +108,7 @@
             p {
                 font-weight: 400;
                 margin-bottom: 7rem;
+                text-align: justify;
             }
 
             &__lists {

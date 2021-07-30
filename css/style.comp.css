@@ -477,7 +477,7 @@ section {
 .about {
   max-width: 100%;
   justify-self: center;
-  min-height: 70vh; }
+  min-height: 80vh; }
   .about__info {
     display: grid;
     grid-template-columns: [text-start] minmax(min-content, 80vw) [text-end photo-start] minmax(auto-fit, min-content) [photo-end];
@@ -639,10 +639,10 @@ section {
     max-height: 80vh;
     align-self: center;
     border-radius: 0.7rem;
-    background-color: rgba(73, 86, 112, 0.9);
+    background-color: rgba(10, 25, 47, 0.85);
     box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
     position: absolute;
-    top: 30rem;
+    top: 33rem;
     border: 1px solid rgba(136, 146, 176, 0.5);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); }
@@ -675,14 +675,14 @@ section {
           margin-bottom: 2.5rem; } }
     .experience__content-1__title, .experience__content-3__title {
       font-size: 3rem;
-      font-weight: bold;
       font-family: "Roboto Mono", "Roboto";
       color: #e6f1ff;
       margin-bottom: 2rem;
       text-align: center; }
     .experience__content-1 p, .experience__content-3 p {
       font-weight: 400;
-      margin-bottom: 7rem; }
+      margin-bottom: 7rem;
+      text-align: justify; }
     .experience__content-2 {
       border-left: 1px solid rgba(136, 146, 176, 0.5);
       border-right: 1px solid rgba(136, 146, 176, 0.5); }
@@ -715,14 +715,14 @@ section {
             margin-bottom: 2.5rem; } }
       .experience__content-2__title {
         font-size: 3rem;
-        font-weight: bold;
         font-family: "Roboto Mono", "Roboto";
         color: #e6f1ff;
         margin-bottom: 2rem;
         text-align: center; }
       .experience__content-2 p {
         font-weight: 400;
-        margin-bottom: 7rem; }
+        margin-bottom: 7rem;
+        text-align: justify; }
       .experience__content-2__lists {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -747,7 +747,7 @@ section {
           border: 1px solid rgba(136, 146, 176, 0.5);
           border-radius: 0.5rem;
           margin-bottom: 5rem;
-          background-color: rgba(73, 86, 112, 0.9); } }
+          background-color: rgba(10, 25, 47, 0.9); } }
     @media only screen and (max-width: 50em) {
       .experience__content {
         display: flex;
@@ -759,4 +759,4 @@ section {
           border: 1px solid rgba(136, 146, 176, 0.5);
           border-radius: 0.5rem;
           margin-bottom: 5rem;
-          background-color: rgba(73, 86, 112, 0.9); } }
+          background-color: rgba(10, 25, 47, 0.9); } }
