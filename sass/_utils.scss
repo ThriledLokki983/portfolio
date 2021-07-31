@@ -43,6 +43,7 @@ $ham-after: bottom 0.1s ease-in 0.25s,
 $ham-after-active: bottom 0.1s ease-out,
     transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
 $shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+$shadow-bot: 0 10px 6px -6px rgba(0, 0, 0, 0.3);
 
 /*
 * HELPERS
@@ -66,6 +67,7 @@ $bp-largest: 75em; // 1200px
 $bp-large: 62.5em; // 1000px
 $bp-small: 50em; // 800px
 $bp-smallest: 37.5em; // 600px
+$bp-vsmll: 25em; // 400px
 
 /*
 * MARGINS

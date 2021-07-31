@@ -65,3 +65,32 @@
     margin-bottom: 5rem;
     background-color: rgba($dark-navy, 0.9);
 }
+
+@mixin span-style {
+    color: $green;
+    font-family: $font-robo-mono;
+    font-size: 2rem;
+    margin-right: 0.7rem;
+}
+
+// PROJECTS PAGE
+@mixin outline {
+    outline: 1px solid red;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin tablet {
+    @media (max-width: 600px) {
+        @content;
+    }
+}

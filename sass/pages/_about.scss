@@ -4,6 +4,10 @@
     min-height: 80vh;
     // animation: moveInBottom 1.2s ease-out;
 
+    & span {
+        @include span-style;
+    }
+
     &__info {
         display: grid;
         grid-template-columns:

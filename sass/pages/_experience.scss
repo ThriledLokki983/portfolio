@@ -1,11 +1,11 @@
 .experience {
     width: 100%;
+    height: 120vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     justify-self: center;
     position: relative;
-    box-shadow: $shadow-dark;
 
     color: $dark_navy;
 
@@ -15,6 +15,8 @@
         text-align: center;
         height: 40rem;
         padding: 4rem;
+        box-shadow: $shadow-bot;
+        border-radius: 0.5rem;
 
         background-color: rgba($light-navy, 0.3);
 
@@ -42,7 +44,7 @@
 
     &__content {
         width: 80%;
-        max-height: 80vh;
+        max-height: 100vh;
         align-self: center;
         border-radius: 0.7rem;
         background-color: rgba($navy, 0.85);
@@ -128,6 +130,10 @@
                 }
             }
         }
+        @media only screen and (max-width: $bp-largest) {
+            height: 100vh;
+            margin-bottom: 30rem;
+        }
 
         @media only screen and (max-width: $bp-large) {
             display: flex;
@@ -155,6 +161,38 @@
             &-3 {
                 @include large-style;
             }
+        }
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: none;
+        background: none;
+
+        height: 220vh;
+
+        &-1,
+        &-2,
+        &-3 {
+            @include large-style;
+        }
+    }
+
+    @media only screen and (max-width: $bp-vsmll) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: none;
+        background: none;
+
+        height: 320vh;
+
+        &-1,
+        &-2,
+        &-3 {
+            @include large-style;
         }
     }
 }
