@@ -4,10 +4,6 @@
     box-shadow: $shadow-dark;
     position: relative;
 
-    &__checkbox {
-        display: none;
-    }
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
@@ -103,9 +99,9 @@
 
                 @supports (-webkit-mask-image: url()) or (mask-image: url()) {
                     background-color: $green;
-                    -webkit-mask-image: url(../img/menu.svg);
+                    -webkit-mask-image: url("../img/menu.svg");
                     -webkit-mask-size: cover;
-                    mask-image: url(../img/menu.svg);
+                    mask-image: url("../img/menu.svg");
                     mask-size: cover;
                 }
             }
