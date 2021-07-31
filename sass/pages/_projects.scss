@@ -114,9 +114,7 @@ img {
             }
 
             li {
-                margin-right: 20px;
-                color: #aaa;
-                font-family: $font-robo-mono;
+                @include ul-style;
             }
         }
     }
@@ -180,9 +178,7 @@ img {
             margin-top: 20px;
 
             li {
-                margin-right: 20px;
-                color: #aaa;
-                font-family: $font-robo-mono;
+                @include ul-style;
             }
         }
     }
@@ -224,7 +220,7 @@ img {
     }
 
     @media screen and (max-width: 768px) {
-        height: 100%;
+        height: 90%;
     }
     @include tablet {
         grid-column: 1 / -1;
@@ -261,7 +257,7 @@ img {
     grid-row: 1 / -1;
 
     @media screen and (max-width: 768px) {
-        height: 100%;
+        height: 90%;
     }
     @include tablet {
         grid-column: 1 / -1;

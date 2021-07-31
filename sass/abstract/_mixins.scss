@@ -138,3 +138,10 @@
     height: 2.5rem;
     fill: $white;
 }
+
+@mixin ul-style {
+    margin-right: 20px;
+    color: #aaa;
+    font-size: 1.3rem;
+    font-family: $font-robo-mono;
+}

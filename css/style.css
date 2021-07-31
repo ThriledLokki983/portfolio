@@ -898,6 +898,7 @@ img {
       .project__right-details ul li {
         margin-right: 20px;
         color: #aaa;
+        font-size: 1.3rem;
         font-family: "Roboto Mono", "Roboto"; }
   @media screen and (max-width: 768px) {
     .project__right {
@@ -948,6 +949,7 @@ img {
       .project__left-details ul li {
         margin-right: 20px;
         color: #aaa;
+        font-size: 1.3rem;
         font-family: "Roboto Mono", "Roboto"; }
   @media screen and (max-width: 768px) {
     .project__left {
@@ -985,7 +987,7 @@ img {
     cursor: pointer; }
   @media screen and (max-width: 768px) {
     .project__right-img {
-      height: 100%; } }
+      height: 90%; } }
   @media (max-width: 600px) {
     .project__right-img {
       grid-column: 1 / -1;
@@ -1028,7 +1030,7 @@ img {
   grid-row: 1 / -1; }
   @media screen and (max-width: 768px) {
     .project__left-img {
-      height: 100%; } }
+      height: 90%; } }
   @media (max-width: 600px) {
     .project__left-img {
       grid-column: 1 / -1;
