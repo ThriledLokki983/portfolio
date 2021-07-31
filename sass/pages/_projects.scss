@@ -80,9 +80,7 @@ img {
 
     &-links {
         &-icon {
-            width: 2rem;
-            height: 2rem;
-            fill: $white;
+            @include project-icons;
         }
     }
 
@@ -153,9 +151,7 @@ img {
 
     &-links {
         &-icon {
-            width: 2rem;
-            height: 2rem;
-            fill: $white;
+            @include project-icons;
         }
     }
 
@@ -222,6 +218,11 @@ img {
     grid-column: 1 / 8;
     grid-row: 1 / -1;
 
+    &:hover {
+        background: none;
+        cursor: pointer;
+    }
+
     @media screen and (max-width: 768px) {
         height: 100%;
     }
@@ -244,6 +245,11 @@ img {
             object-fit: cover;
             width: auto;
             height: 100%;
+        }
+
+        &:hover {
+            background: none;
+            cursor: pointer;
         }
     }
 }

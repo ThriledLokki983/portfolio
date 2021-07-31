@@ -132,3 +132,9 @@
     mix-blend-mode: screen;
     border-radius: 2px;
 }
+
+@mixin project-icons {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: $white;
+}
