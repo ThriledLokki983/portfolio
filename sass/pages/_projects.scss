@@ -42,13 +42,95 @@ img {
     }
 }
 
-.project {
-    margin: 30px;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    align-items: center;
+.project__right {
+    @include project-alignment;
+    margin-bottom: 15rem;
+
+    &-container {
+        & h2 {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &-label {
+        color: #64ffda;
+        font-family: $font-robo-mono;
+        font-size: 1.2rem;
+
+        display: flex;
+        justify-content: flex-end;
+
+        @include tablet {
+            justify-content: flex-start;
+        }
+    }
+
+    &-title {
+        font-size: 3rem;
+        margin: 10px 0 30px;
+        font-family: $font-robo;
+        color: #eee;
+
+        display: flex;
+        justify-content: flex-end;
+        @include tablet {
+            justify-content: flex-start;
+        }
+    }
+
+    &-links {
+        &-icon {
+            width: 2rem;
+            height: 2rem;
+            fill: $white;
+        }
+    }
+
+    &-details {
+        font-size: 15px;
+        line-height: 1.5;
+        color: #aaa;
+
+        p {
+            border: 1px solid rgba($slate, 0.1);
+            background-color: $light-navy;
+            padding: 20px 25px;
+            box-shadow: $shadow-dark;
+            border-radius: 0.3rem;
+            font-weight: 300;
+            text-align: justify;
+
+            @include tablet {
+                background-color: transparent;
+                padding: 20px;
+            }
+        }
+
+        ul {
+            display: flex;
+            margin-top: 20px;
+            justify-content: flex-end;
+
+            @include tablet {
+                justify-content: flex-start;
+            }
+
+            li {
+                margin-right: 20px;
+                color: #aaa;
+                font-family: $font-robo-mono;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        align-items: flex-start;
+    }
+}
+
+.project__left {
+    @include project-alignment;
+    margin-bottom: 15rem;
 
     &-container {
         & h2 {
@@ -87,12 +169,13 @@ img {
             background-color: $light-navy;
             padding: 20px 25px;
             box-shadow: $shadow-dark;
+            border-radius: 0.3rem;
             font-weight: 300;
             text-align: justify;
 
             @include tablet {
                 background-color: transparent;
-                padding: 20px 0;
+                padding: 20px;
             }
         }
 
@@ -113,9 +196,18 @@ img {
     }
 }
 
-.project-content {
+.project__left-content {
+    @include project-content;
+
+    @include tablet {
+        grid-column: 1 / -1;
+        padding: 40px;
+    }
+}
+
+.project__right-content {
     position: relative;
-    grid-column: 1 / 7;
+    grid-column: 7 / 13;
     grid-row: 1 / -1;
 
     @include tablet {
@@ -124,12 +216,40 @@ img {
     }
 }
 
-.project-img {
-    box-shadow: $shadow-bot;
-    position: relative;
-    z-index: -1;
-    background-color: $green;
-    background: linear-gradient(0.4turn, #64ffda, #64ff8d);
+.project__right-img {
+    @include photo-effect;
+    border-radius: 2px;
+    grid-column: 1 / 8;
+    grid-row: 1 / -1;
+
+    @media screen and (max-width: 768px) {
+        height: 100%;
+    }
+    @include tablet {
+        grid-column: 1 / -1;
+        opacity: 0.25;
+    }
+
+    &:before {
+        @include before-effect;
+    }
+
+    img {
+        border-radius: 2px;
+        position: relative;
+        mix-blend-mode: multiply;
+        filter: grayscale(100%) contrast(1);
+
+        @media screen and (max-width: 768px) {
+            object-fit: cover;
+            width: auto;
+            height: 100%;
+        }
+    }
+}
+
+.project__left-img {
+    @include photo-effect;
     border-radius: 2px;
     grid-column: 6 / -1;
     grid-row: 1 / -1;
@@ -143,18 +263,7 @@ img {
     }
 
     &:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 3;
-        background-color: #0a192f;
-        mix-blend-mode: screen;
-        border-radius: 2px;
+        @include before-effect;
     }
 
     img {
@@ -162,11 +271,6 @@ img {
         position: relative;
         mix-blend-mode: multiply;
         filter: grayscale(100%) contrast(1);
-
-        &:hover {
-            cursor: pointer;
-            background: none;
-        }
 
         @media screen and (max-width: 768px) {
             object-fit: cover;
