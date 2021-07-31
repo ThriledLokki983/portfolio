@@ -45,6 +45,7 @@ img {
 .project__right {
     @include project-alignment;
     margin-bottom: 15rem;
+    // box-shadow: $shadow-bot;
 
     &-container {
         & h2 {
@@ -127,6 +128,7 @@ img {
 .project__left {
     @include project-alignment;
     margin-bottom: 15rem;
+    // box-shadow: $shadow-bot;
 
     &-container {
         & h2 {
@@ -213,6 +215,7 @@ img {
     border-radius: 2px;
     grid-column: 1 / 8;
     grid-row: 1 / -1;
+    box-shadow: $shadow-bot;
 
     &:hover {
         background: none;
@@ -255,6 +258,7 @@ img {
     border-radius: 2px;
     grid-column: 6 / -1;
     grid-row: 1 / -1;
+    box-shadow: $shadow-bot;
 
     @media screen and (max-width: 768px) {
         height: 90%;

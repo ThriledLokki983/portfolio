@@ -981,7 +981,8 @@ img {
   background: linear-gradient(0.4turn, #64ffda, #64ff8d);
   border-radius: 2px;
   grid-column: 1 / 8;
-  grid-row: 1 / -1; }
+  grid-row: 1 / -1;
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.3); }
   .project__right-img:hover {
     background: none;
     cursor: pointer; }
@@ -1027,7 +1028,8 @@ img {
   background: linear-gradient(0.4turn, #64ffda, #64ff8d);
   border-radius: 2px;
   grid-column: 6 / -1;
-  grid-row: 1 / -1; }
+  grid-row: 1 / -1;
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.3); }
   @media screen and (max-width: 768px) {
     .project__left-img {
       height: 90%; } }
