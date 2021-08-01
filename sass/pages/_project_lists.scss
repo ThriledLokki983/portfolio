@@ -4,9 +4,8 @@
     -webkit-box-align: center;
     align-items: center;
 
-    // margin: 0px auto;
-    // padding: 10rem 0px;
-    // max-width: 100rem;
+    max-width: 1000px;
+    margin: 50px auto;
 
     &-header {
         margin-bottom: 1.5rem;
@@ -14,6 +13,10 @@
         & span {
             @include span-style;
         }
+    }
+
+    & p {
+        padding: 1rem;
     }
 
     &-archive {

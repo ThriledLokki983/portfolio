@@ -1,3 +1,16 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px 0px 10px;
+    font-weight: 600;
+    color: $lightest-slate;
+    line-height: 1.1;
+    font-family: $font-robo;
+}
+
 .heading__main {
     margin: 0;
     font-size: clamp(4rem, 8vw, 8rem);
@@ -154,5 +167,16 @@
         &--list {
             @include list-style;
         }
+    }
+}
+
+.topic__heading {
+    font-family: $font-robo-mono;
+    font-size: 1.6rem;
+    color: $lightest-slate;
+
+    &:hover {
+        cursor: pointer;
+        color: $green;
     }
 }

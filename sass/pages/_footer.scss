@@ -1,2 +1,60 @@
 .footer {
+    display: grid;
+    grid-column: left-start / right-end;
+
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    min-height: 70px;
+    padding: 15px;
+    text-align: center;
+
+    &__box {
+        color: rgba($light-slate, 0.6);
+        font-family: $font-robo-mono;
+        font-size: 1.2rem;
+        line-height: 1;
+
+        & a:hover {
+            color: $green;
+        }
+    }
+
+    .github-stats {
+        margin-top: 1rem;
+
+        & > span {
+            display: inline-flex;
+            -webkit-box-align: center;
+            align-items: center;
+            margin: 0px 0.7rem;
+
+            .icon:hover {
+                fill: $green;
+            }
+        }
+
+        & svg {
+            display: inline-block;
+            margin-right: 0.5rem;
+            width: 1.4rem;
+            height: 1.4rem;
+        }
+
+        &:hover {
+            & svg {
+                fill: $green;
+            }
+
+            & > span {
+                .icon {
+                    fill: $green;
+                }
+            }
+        }
+    }
 }

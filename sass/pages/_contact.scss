@@ -1,0 +1,56 @@
+.contact {
+    max-width: 600px;
+    margin: 0px auto 100px;
+    text-align: center;
+
+    &--head {
+        & span {
+            @include span-style;
+        }
+    }
+    .heading__number {
+        &::after {
+            opacity: 0;
+        }
+    }
+
+    .overline {
+        display: block;
+        margin-bottom: 20px;
+        color: $green;
+        font-family: $font-robo-mono;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    &__title {
+        font-size: clamp(4rem, 5vw, 6rem);
+    }
+
+    &__info {
+        font-size: 1.7rem;
+        color: $slate;
+    }
+
+    &__email-link {
+        color: $green;
+        background-color: transparent;
+        border: 1px solid $green;
+        border-radius: 0.5rem;
+        padding: 1.25rem 1.75rem;
+        font-size: 1.5rem;
+        font-family: $font-robo-mono;
+        line-height: 1;
+        text-decoration: none;
+        cursor: pointer;
+        transition: $transition;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    & a {
+        display: inline-block;
+        text-decoration-skip-ink: auto;
+        position: relative;
+    }
+}

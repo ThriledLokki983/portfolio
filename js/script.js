@@ -1,5 +1,8 @@
 "use strict";
-const nav = document.querySelector(".header__nav");
+
+const tabs = document.querySelectorAll(".operations__tab");
+const tabsContainer = document.querySelector(".operations__tab-container");
+const tabsContent = document.querySelectorAll(".operations__content");
 
 window.addEventListener("DOMContentLoaded", () => {
     const anim = anime.timeline({
@@ -26,30 +29,27 @@ window.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-const logo = document.querySelector(".intro__container");
+// USe event delegation -- attach the event handler to the parent element that contains all the elements we want to work with
+tabsContainer.addEventListener("click", function (e) {
+    const clicked = e.target.closest(".operations__tab");
 
-setTimeout(() => {
-    logo.classList.add("hidden");
-}, 3000);
+    // Guard clause
+    if (!clicked) return;
 
-// Adding a sticky Nav-bar
-const header1 = document.querySelector(".header__nav");
-const navHeight = nav.getBoundingClientRect().height;
+    // Clear the active class from all elements that already has it
+    tabs.forEach((t) => t.classList.remove("operations__tab--active"));
+    // Add it to the one that was clicked
+    clicked.classList.add("operations__tab--active");
 
-console.log(navHeight);
+    // Clear all content active class form the elements and then add it to the selected button
+    tabsContent.forEach((c) =>
+        c.classList.remove("operations__content--active")
+    );
 
-const stickyNav = function (entries) {
-    const [entry] = entries;
+    // Activate the content Area of the clicked button
+    document
+        .querySelector(`.operations__content--${clicked.dataset.tab}`)
+        .classList.add("operations__content--active");
 
-    console.log(nav);
-    if (!entry.isIntersecting) nav.classList.add("sticky");
-    else nav.classList.remove("sticky");
-};
-
-const headerObserver = new IntersectionObserver(stickyNav, {
-    root: null,
-    threshold: 0,
-    rootMargin: `-${navHeight}px`,
+    // console.log(clicked.dataset.tab);
 });
-
-headerObserver.observe(header1);
