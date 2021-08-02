@@ -1,29 +1,39 @@
+/** @format */
+
 .page__layout {
-    display: grid;
+	display: grid;
 
-    grid-template-columns:
-        [left-start] 1fr [left-end main-start] minmax(min-content, 90vw)
-        [main-end right-start] 1fr [right-end];
-    grid-gap: 1rem;
+	grid-template-columns:
+		[left-start] 1fr [left-end main-start] minmax(min-content, 90vw)
+		[main-end right-start] 1fr [right-end];
+	grid-gap: 1rem;
 
-    @media only screen and (max-width: $bp-largest) {
-    }
+	@media only screen and (max-width: $bp-largest) {
+	}
 
-    @media only screen and (max-width: $bp-large) {
-    }
+	@media only screen and (max-width: $bp-large) {
+	}
 
-    @media only screen and (max-width: $bp-small) {
-    }
+	@media only screen and (max-width: $bp-small) {
+	}
 
-    @media only screen and (max-width: $bp-smallest) {
-        display: grid;
+	@media only screen and (max-width: $bp-smallest) {
+		display: grid;
 
-        grid-template-columns: minmax(min-content, 90vw);
-    }
+		grid-template-columns: minmax(min-content, 90vw);
+	}
 }
 
 section {
-    margin: 0px auto;
-    padding: 100px 0px;
-    max-width: 1000px;
+	margin: 0px auto;
+	padding: 10rem 0px;
+	max-width: 100rem;
+
+	@media only screen and (max-width: $bp-large) {
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		margin: 0;
+		padding: 5rem 1rem;
+	}
 }

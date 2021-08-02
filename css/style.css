@@ -1,3 +1,4 @@
+/** @format */
 /*
 * FONTS TO BE USED
 */
@@ -90,6 +91,7 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
+/** @format */
 .page__layout {
   display: grid;
   grid-template-columns: [left-start] 1fr [left-end main-start] minmax(min-content, 90vw) [main-end right-start] 1fr [right-end];
@@ -101,8 +103,12 @@ body {
 
 section {
   margin: 0px auto;
-  padding: 100px 0px;
-  max-width: 1000px; }
+  padding: 10rem 0px;
+  max-width: 100rem; }
+  @media only screen and (max-width: 50em) {
+    section {
+      margin: 0;
+      padding: 5rem 1rem; } }
 
 .left {
   grid-column: left-start / left-end; }
@@ -116,6 +122,7 @@ section {
   grid-template-columns: minmax(min-content, 88vw);
   justify-content: center; }
 
+/** @format */
 .right {
   padding: 5px;
   width: 4rem;
@@ -147,7 +154,7 @@ section {
     margin: 0.5rem auto;
     letter-spacing: 0.4em;
     writing-mode: vertical-rl;
-    font-size: 1.1rem; }
+    font-size: 1.4rem; }
   .email::after {
     content: "";
     display: block;
@@ -160,7 +167,7 @@ section {
   display: inline-block;
   text-decoration: none;
   text-decoration-skip-ink: auto;
-  color: #a8b2d1;
+  color: #ccd6f6;
   position: relative; }
 
 .left {
@@ -201,11 +208,12 @@ section {
     background-color: #a8b2d1; }
 
 .icon {
-  fill: #8892b0;
-  width: 1.5rem;
-  height: 1.5rem;
+  fill: #ccd6f6;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer; }
 
+/** @format */
 h1,
 h2,
 h3,
@@ -247,7 +255,7 @@ h6 {
 
 .paragraph {
   margin: 20px 0px 0px;
-  max-width: 540px;
+  max-width: 50.5rem;
   margin-block-start: 1em;
   font-size: 1.6rem;
   color: #8892b0;
@@ -484,6 +492,7 @@ button {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.95); }
 
+/** @format */
 .home {
   max-width: 100%;
   min-height: 90vh;
@@ -498,14 +507,19 @@ button {
     margin-bottom: 2rem;
     font-family: "Roboto Mono", "Roboto"; }
   .home__btn {
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 1.5rem 2.5rem;
     cursor: pointer;
     font-family: "Roboto Mono", "Roboto";
+    transition: all 0.6s;
     align-self: start;
     justify-self: start; }
+    .home__btn:hover {
+      transform: scale(0.9); }
   .home__text {
-    line-height: 1.7; }
+    line-height: 1.4;
+    font-size: 2rem;
+    text-align: justify; }
   @media only screen and (max-width: 50em) {
     .home {
       min-height: 80vh;
@@ -537,6 +551,7 @@ button {
   transform: scale(0);
   transition: all 1s; }
 
+/** @format */
 .about {
   max-width: 100%;
   justify-self: center;
@@ -554,13 +569,15 @@ button {
       grid-column: 1 / 2; }
       .about__info--text-1 {
         margin-bottom: 0;
-        text-align: justify; }
+        text-align: justify;
+        font-size: 1.8rem;
+        line-height: 1.4; }
     .about__info--photo {
       grid-column: 2 / 3;
       margin-left: 10rem; }
       .about__info--photo--wrapper {
         width: 100%;
-        height: 70.2%;
+        height: 63.5%;
         border-radius: 1rem;
         transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
         display: block;
@@ -581,7 +598,9 @@ button {
           top: 0px;
           left: 0px;
           height: 100%;
-          background-image: linear-gradient(to right, rgba(100, 255, 218, 0.4), rgba(100, 255, 218, 0.4)); }
+          background-image: linear-gradient(to right, rgba(100, 255, 218, 0.4), rgba(100, 255, 218, 0.4));
+          background-size: cover;
+          mix-blend-mode: screen; }
         .about__info--photo--wrapper__gatsby {
           overflow: hidden; }
         .about__info--photo--wrapper__gatsby,
@@ -627,7 +646,7 @@ button {
       overflow: hidden;
       list-style: none;
       margin: 2rem 0 0;
-      font-size: 1.2rem; }
+      font-size: 1.5rem; }
       .about__info__skill-list li::before {
         content: "";
         display: inline-block;
@@ -656,7 +675,7 @@ button {
   @media only screen and (max-width: 50em) {
     .about {
       min-height: 80vh;
-      margin: 2rem 2rem; }
+      margin: 2rem; }
       .about__skill-list {
         font-size: 2.5rem; }
       .about__info {
@@ -669,7 +688,7 @@ button {
             display: none; } }
   @media only screen and (max-width: 37.5em) {
     .about {
-      margin: 2rem 2rem; } }
+      margin: 2rem; } }
 
 .experience {
   width: 100%;
