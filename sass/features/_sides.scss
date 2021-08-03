@@ -1,109 +1,119 @@
 /** @format */
 
 .right {
-	padding: 5px;
-	width: 4rem;
-	position: fixed;
-	bottom: 0;
-	left: auto;
-	right: 4rem;
-	z-index: 9;
-	color: $light-slate;
-	overflow: hidden;
+    padding: 5px;
+    width: 4rem;
+    position: fixed;
+    bottom: 0;
+    left: auto;
+    right: 4rem;
+    z-index: 9;
+    color: $light-slate;
+    overflow: hidden;
 
-	@media only screen and (max-width: $bp-smallest) {
-		display: none;
-	}
+    &:hover {
+        color: $green;
+    }
 
-	@media only screen and (max-width: $bp-large) {
-		display: none;
-	}
+    @media only screen and (max-width: $bp-smallest) {
+        display: none;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        display: none;
+    }
 }
 
 .email {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-	-webkit-box-align: center;
-	padding: 0;
-	margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    -webkit-box-align: center;
+    padding: 0;
+    margin: 0;
 
-	& a {
-		padding: 0.7rem;
-		margin: 0.5rem auto;
-		letter-spacing: 0.4em;
-		writing-mode: vertical-rl;
-		font-size: 1.4rem;
-	}
+    & a {
+        padding: 0.7rem;
+        margin: 0.5rem auto;
+        letter-spacing: 0.4em;
+        writing-mode: vertical-rl;
+        font-size: 1.4rem;
+    }
 
-	&::after {
-		content: "";
-		display: block;
-		width: 0.5px;
-		height: 17rem;
-		margin: 0 auto;
-		background-color: $light-slate;
-	}
+    &::after {
+        content: "";
+        display: block;
+        width: 0.5px;
+        height: 17rem;
+        margin: 0 auto;
+        background-color: $light-slate;
+    }
 }
 
 .mail {
-	display: inline-block;
-	text-decoration: none;
-	text-decoration-skip-ink: auto;
-	color: $lightest-slate;
-	position: relative;
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: $lightest-slate;
+    position: relative;
 }
 
 .left {
-	padding: 5px;
-	width: 4rem;
-	position: fixed;
-	bottom: 0;
-	right: auto;
-	left: 4rem;
-	z-index: 9;
-	color: $light-slate;
-	display: flex;
-	align-items: center;
-	overflow: hidden;
+    padding: 5px;
+    width: 4rem;
+    position: fixed;
+    bottom: 0;
+    right: auto;
+    left: 4rem;
+    z-index: 9;
+    color: $light-slate;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 
-	@media only screen and (max-width: $bp-smallest) {
-		display: none;
-	}
+    @media only screen and (max-width: $bp-smallest) {
+        display: none;
+    }
 
-	@media only screen and (max-width: $bp-large) {
-		display: none;
-	}
+    @media only screen and (max-width: $bp-large) {
+        display: none;
+    }
 }
 
 .side__social {
-	display: flex;
-	flex-direction: column;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	-webkit-box-align: center;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    -webkit-box-align: center;
 
-	&--item:not(:last-child) {
-		margin-bottom: 1.5rem;
-	}
+    &--item:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
 
-	&::after {
-		content: "";
-		display: block;
-		width: 0.5px;
-		height: 17rem;
-		margin: 1.5rem auto 0 auto;
-		align-self: center;
-		background-color: $light-slate;
-	}
+    &::after {
+        content: "";
+        display: block;
+        width: 0.5px;
+        height: 17rem;
+        margin: 1.5rem auto 0 auto;
+        align-self: center;
+        background-color: $light-slate;
+    }
 }
 
 .icon {
-	fill: $lightest-slate;
-	width: 2rem;
-	height: 2rem;
-	cursor: pointer;
+    fill: $lightest-slate;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+
+    &:hover {
+        fill: $green;
+        border: 1px solid $green;
+        margin: 1rem;
+    }
 }

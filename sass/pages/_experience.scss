@@ -1,5 +1,5 @@
 .experience {
-    width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -10,6 +10,10 @@
 
     // border: 1px solid #fff;
 
+    & span {
+        @include span-style;
+    }
+
     .paragraph {
         max-width: 65rem;
         text-align: justify;
@@ -17,10 +21,9 @@
     }
 
     &__head {
-        text-align: center;
-        padding: 4rem 4rem 1.5rem 4rem;
+        justify-content: flex-start;
         border-radius: 0.5rem;
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
 
         // background-color: rgba($light-navy, 0.3);
 
@@ -37,9 +40,7 @@
         }
 
         &-paragraph {
-            font-size: 1.6rem;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 1.8rem;
             font-weight: 300;
             max-width: 600px;
             text-align: justify;
@@ -53,17 +54,20 @@
         flex-direction: column;
 
         &--topics {
-            padding: 2rem;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            justify-content: center;
-            justify-items: center;
+            grid-template-columns: repeat(4, 1fr);
 
             .btn {
                 &:hover {
                     border-bottom: 2px solid $green;
                 }
+                &:active {
+                    border-bottom: 2px solid $green;
+                }
+            }
+
+            &:active {
+                border-bottom: 2px solid $green;
             }
         }
 
@@ -106,6 +110,7 @@
         gap: 5rem;
         box-shadow: $shadow-dark;
         border-radius: 0.7rem;
+        background-color: rgba($green, 0.1);
 
         .info {
             display: flex;

@@ -48,6 +48,7 @@ body {
   font-family: "Nunito", sans-serif;
   color: #64ffda;
   line-height: 1.6;
+  font-size: 1.8rem;
   background-color: #0a192f;
   overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
@@ -133,6 +134,8 @@ section {
   z-index: 9;
   color: #a8b2d1;
   overflow: hidden; }
+  .right:hover {
+    color: #64ffda; }
   @media only screen and (max-width: 37.5em) {
     .right {
       display: none; } }
@@ -212,6 +215,10 @@ section {
   width: 2rem;
   height: 2rem;
   cursor: pointer; }
+  .icon:hover {
+    fill: #64ffda;
+    border: 1px solid #64ffda;
+    margin: 1rem; }
 
 /** @format */
 h1,
@@ -411,8 +418,8 @@ button {
     height: 20%;
     animation: moveInLeft 1.2s ease-out; }
     .header__logo-box--logo {
-      width: 40px;
-      height: 40px; }
+      width: 8rem;
+      height: 8rem; }
   .header__nav {
     justify-content: end;
     gap: 1rem;
@@ -447,13 +454,13 @@ button {
       padding: 1.5rem 1rem; }
       .header__logo-box {
         position: relative;
-        width: 20%;
-        height: 20%;
+        width: 100%;
+        height: 100%;
         animation: moveInLeft 1.2s ease-out; }
         .header__logo-box--logo {
-          width: 3rem;
-          height: 3rem;
-          margin-left: 3rem; }
+          width: 10rem;
+          height: 10rem;
+          margin-left: -10rem; }
       .header__nav--list {
         display: none; }
       .header__nav {
@@ -463,8 +470,8 @@ button {
         .header__nav:before {
           content: "";
           display: inline-block;
-          height: 3rem;
-          width: 3rem;
+          height: 10rem;
+          width: 10rem;
           margin-left: 50rem;
           cursor: pointer; }
           @supports (-webkit-mask-image: url()) or (mask-image: url()) {
@@ -482,10 +489,12 @@ button {
         position: relative;
         width: 100%;
         height: 100%;
-        animation: moveInLeft 1.2s ease-out; }
+        animation: moveInLeft 1.2s ease-out;
+        margin-left: -10rem; }
         .header__logo-box--logo {
-          width: 4rem;
-          height: 4rem; } }
+          width: 10rem;
+          height: 10rem;
+          margin-left: 5rem; } }
 
 /* nav and stickly class at the same time */
 .header.sticky {
@@ -691,22 +700,26 @@ button {
       margin: 2rem; } }
 
 .experience {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   justify-self: center;
   position: relative;
   color: #0a192f; }
+  .experience span {
+    color: #64ffda;
+    font-family: "Roboto Mono", "Roboto";
+    font-size: 2rem;
+    margin-right: 0.7rem; }
   .experience .paragraph {
     max-width: 65rem;
     text-align: justify;
     font-weight: 400; }
   .experience__head {
-    text-align: center;
-    padding: 4rem 4rem 1.5rem 4rem;
+    justify-content: flex-start;
     border-radius: 0.5rem;
-    margin-bottom: 5rem; }
+    margin-bottom: 3rem; }
     .experience__head--text {
       display: flex;
       -webkit-box-align: center;
@@ -718,9 +731,7 @@ button {
       white-space: nowrap;
       color: #e6f1ff; }
     .experience__head-paragraph {
-      font-size: 1.6rem;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 1.8rem;
       font-weight: 300;
       max-width: 600px;
       text-align: justify; }
@@ -729,13 +740,13 @@ button {
     display: flex;
     flex-direction: column; }
     .experience__lists--topics {
-      padding: 2rem;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      justify-content: center;
-      justify-items: center; }
+      grid-template-columns: repeat(4, 1fr); }
       .experience__lists--topics .btn:hover {
+        border-bottom: 2px solid #64ffda; }
+      .experience__lists--topics .btn:active {
+        border-bottom: 2px solid #64ffda; }
+      .experience__lists--topics:active {
         border-bottom: 2px solid #64ffda; }
     .experience__lists--details__icon {
       margin-top: 3rem;
@@ -791,7 +802,8 @@ button {
   grid-template-columns: 20rem 1fr;
   gap: 5rem;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  border-radius: 0.7rem; }
+  border-radius: 0.7rem;
+  background-color: rgba(100, 255, 218, 0.1); }
   .operations__content--active .info {
     display: flex;
     flex-direction: column;
