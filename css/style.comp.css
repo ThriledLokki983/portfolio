@@ -1,3 +1,4 @@
+/** @format */
 /*
 * FONTS TO BE USED
 */
@@ -47,6 +48,7 @@ body {
   font-family: "Nunito", sans-serif;
   color: #64ffda;
   line-height: 1.6;
+  font-size: 1.8rem;
   background-color: #0a192f;
   overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
@@ -90,19 +92,32 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
+/** @format */
 .page__layout {
   display: grid;
   grid-template-columns: [left-start] 1fr [left-end main-start] minmax(min-content, 90vw) [main-end right-start] 1fr [right-end];
   grid-gap: 1rem; }
+  @media only screen and (max-width: 50em) {
+    .page__layout {
+      display: grid;
+      grid-template-columns: minmax(min-content, 1fr); } }
   @media only screen and (max-width: 37.5em) {
     .page__layout {
       display: grid;
-      grid-template-columns: minmax(min-content, 90vw); } }
+      grid-template-columns: minmax(auto-fit, 1fr); } }
 
 section {
   margin: 0px auto;
-  padding: 100px 0px;
-  max-width: 1000px; }
+  padding: 10rem 0px;
+  width: 100%; }
+  @media only screen and (max-width: 50em) {
+    section {
+      margin: 0;
+      padding: 5rem 1rem; } }
+  @media only screen and (max-width: 37.5em) {
+    section {
+      margin: 0;
+      padding: 0; } }
 
 .left {
   grid-column: left-start / left-end; }
@@ -113,9 +128,11 @@ section {
 .content {
   grid-column: main-start / main-end;
   display: grid;
-  grid-template-columns: minmax(min-content, 88vw);
-  justify-content: center; }
+  grid-template-columns: minmax(min-content, 1fr);
+  justify-content: center;
+  max-width: 100%; }
 
+/** @format */
 .right {
   padding: 5px;
   width: 4rem;
@@ -126,6 +143,8 @@ section {
   z-index: 9;
   color: #a8b2d1;
   overflow: hidden; }
+  .right:hover {
+    color: #64ffda; }
   @media only screen and (max-width: 37.5em) {
     .right {
       display: none; } }
@@ -147,7 +166,7 @@ section {
     margin: 0.5rem auto;
     letter-spacing: 0.4em;
     writing-mode: vertical-rl;
-    font-size: 1.1rem; }
+    font-size: 1.4rem; }
   .email::after {
     content: "";
     display: block;
@@ -160,7 +179,7 @@ section {
   display: inline-block;
   text-decoration: none;
   text-decoration-skip-ink: auto;
-  color: #a8b2d1;
+  color: #ccd6f6;
   position: relative; }
 
 .left {
@@ -201,11 +220,16 @@ section {
     background-color: #a8b2d1; }
 
 .icon {
-  fill: #8892b0;
-  width: 1.5rem;
-  height: 1.5rem;
+  fill: #ccd6f6;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer; }
+  .icon:hover {
+    fill: #64ffda;
+    border: 1px solid #64ffda;
+    margin: 1rem; }
 
+/** @format */
 h1,
 h2,
 h3,
@@ -219,24 +243,32 @@ h6 {
   font-family: "Roboto", "Courier New", Courier, monospace, sans-serif; }
 
 .heading__main {
-  margin: 0;
-  font-size: clamp(4rem, 8vw, 8rem); }
+  margin: 0; }
   .heading__main-primary {
     font-weight: 700;
     color: #e6f1ff;
     font-family: "Nunito", sans-serif;
     line-height: 1.1;
-    font-size: clamp(4rem, 8vw, 8rem);
+    font-size: clamp(6rem, 20vw, 8rem);
     display: block;
     margin-bottom: 1rem; }
+    @media only screen and (max-width: 50em) {
+      .heading__main-primary {
+        font-size: 10rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .heading__main-primary {
+        font-size: 10rem; } }
   .heading__main-secondary {
     color: #8892b0;
     line-height: 0.9;
-    font-size: clamp(4rem, 8vw, 8rem);
+    font-size: clamp(5rem, 20vw, 6rem);
     display: block;
     font-family: "Nunito", sans-serif;
     margin-bottom: 1.5rem;
     font-weight: 700; }
+    @media only screen and (max-width: 37.5em) {
+      .heading__main-secondary {
+        font-size: 7.5rem; } }
   .heading__main-tertiary {
     text-align: center;
     color: #64ffda;
@@ -247,7 +279,7 @@ h6 {
 
 .paragraph {
   margin: 20px 0px 0px;
-  max-width: 540px;
+  max-width: 50.5rem;
   margin-block-start: 1em;
   font-size: 1.6rem;
   color: #8892b0;
@@ -270,6 +302,11 @@ h6 {
     color: #64ffda;
     font-family: "Roboto", "Courier New", Courier, monospace, sans-serif;
     font-weight: 500; }
+  @media only screen and (max-width: 37.5em) {
+    .paragraph {
+      margin: 0;
+      max-width: 100%;
+      font-size: 4rem; } }
 
 .heading__number {
   display: flex;
@@ -308,6 +345,14 @@ h6 {
       font-size: clamp(4rem, 5vw, 4rem);
       margin: 0;
       width: 80%; } }
+  @media only screen and (max-width: 50em) {
+    .heading__number {
+      font-size: 5rem;
+      margin-bottom: 3.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading__number {
+      font-size: 5rem;
+      margin-bottom: 3.5rem; } }
 
 .item__lists-enjoy {
   display: flex;
@@ -403,8 +448,8 @@ button {
     height: 20%;
     animation: moveInLeft 1.2s ease-out; }
     .header__logo-box--logo {
-      width: 40px;
-      height: 40px; }
+      width: 8rem;
+      height: 8rem; }
   .header__nav {
     justify-content: end;
     gap: 1rem;
@@ -439,13 +484,13 @@ button {
       padding: 1.5rem 1rem; }
       .header__logo-box {
         position: relative;
-        width: 20%;
-        height: 20%;
+        width: 100%;
+        height: 100%;
         animation: moveInLeft 1.2s ease-out; }
         .header__logo-box--logo {
-          width: 3rem;
-          height: 3rem;
-          margin-left: 3rem; }
+          width: 10rem;
+          height: 10rem;
+          margin-left: -10rem; }
       .header__nav--list {
         display: none; }
       .header__nav {
@@ -455,8 +500,8 @@ button {
         .header__nav:before {
           content: "";
           display: inline-block;
-          height: 3rem;
-          width: 3rem;
+          height: 10rem;
+          width: 10rem;
           margin-left: 50rem;
           cursor: pointer; }
           @supports (-webkit-mask-image: url()) or (mask-image: url()) {
@@ -474,16 +519,19 @@ button {
         position: relative;
         width: 100%;
         height: 100%;
-        animation: moveInLeft 1.2s ease-out; }
+        animation: moveInLeft 1.2s ease-out;
+        margin-left: -10rem; }
         .header__logo-box--logo {
-          width: 4rem;
-          height: 4rem; } }
+          width: 10rem;
+          height: 10rem;
+          margin-left: 5rem; } }
 
 /* nav and stickly class at the same time */
 .header.sticky {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.95); }
 
+/** @format */
 .home {
   max-width: 100%;
   min-height: 90vh;
@@ -497,15 +545,28 @@ button {
     font-size: 1.4rem;
     margin-bottom: 2rem;
     font-family: "Roboto Mono", "Roboto"; }
+    @media only screen and (max-width: 37.5em) {
+      .home__start {
+        font-size: 3rem; } }
   .home__btn {
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 1.5rem 2.5rem;
     cursor: pointer;
     font-family: "Roboto Mono", "Roboto";
+    transition: all 0.6s;
     align-self: start;
     justify-self: start; }
+    @media only screen and (max-width: 50em) {
+      .home__btn {
+        margin-top: 5rem;
+        font-size: 3rem;
+        padding: 2.5rem 3.5rem; } }
+    .home__btn:hover {
+      transform: scale(0.9); }
   .home__text {
-    line-height: 1.7; }
+    line-height: 1.4;
+    font-size: 2rem;
+    text-align: justify; }
   @media only screen and (max-width: 50em) {
     .home {
       min-height: 80vh;
@@ -513,7 +574,18 @@ button {
       overflow: hidden; } }
   @media only screen and (max-width: 37.5em) {
     .home {
-      margin: 2rem 2rem; } }
+      height: 100vh;
+      width: 100%;
+      margin: 0;
+      padding: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-self: center; }
+      .home__text {
+        line-height: 1.4;
+        font-size: 2.5rem;
+        text-align: justify; } }
 
 .logo__container {
   width: max-content;
@@ -537,6 +609,7 @@ button {
   transform: scale(0);
   transition: all 1s; }
 
+/** @format */
 .about {
   max-width: 100%;
   justify-self: center;
@@ -554,13 +627,15 @@ button {
       grid-column: 1 / 2; }
       .about__info--text-1 {
         margin-bottom: 0;
-        text-align: justify; }
+        text-align: justify;
+        font-size: 1.8rem;
+        line-height: 1.4; }
     .about__info--photo {
       grid-column: 2 / 3;
       margin-left: 10rem; }
       .about__info--photo--wrapper {
         width: 100%;
-        height: 70.2%;
+        height: 63.5%;
         border-radius: 1rem;
         transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
         display: block;
@@ -581,7 +656,9 @@ button {
           top: 0px;
           left: 0px;
           height: 100%;
-          background-image: linear-gradient(to right, rgba(100, 255, 218, 0.4), rgba(100, 255, 218, 0.4)); }
+          background-image: linear-gradient(to right, rgba(100, 255, 218, 0.4), rgba(100, 255, 218, 0.4));
+          background-size: cover;
+          mix-blend-mode: screen; }
         .about__info--photo--wrapper__gatsby {
           overflow: hidden; }
         .about__info--photo--wrapper__gatsby,
@@ -627,7 +704,7 @@ button {
       overflow: hidden;
       list-style: none;
       margin: 2rem 0 0;
-      font-size: 1.2rem; }
+      font-size: 1.5rem; }
       .about__info__skill-list li::before {
         content: "";
         display: inline-block;
@@ -656,7 +733,7 @@ button {
   @media only screen and (max-width: 50em) {
     .about {
       min-height: 80vh;
-      margin: 2rem 2rem; }
+      margin: 2rem; }
       .about__skill-list {
         font-size: 2.5rem; }
       .about__info {
@@ -669,25 +746,36 @@ button {
             display: none; } }
   @media only screen and (max-width: 37.5em) {
     .about {
-      margin: 2rem 2rem; } }
+      margin: 10rem 0;
+      padding: 5rem; }
+      .about__info--text-1 {
+        font-size: 4rem;
+        line-height: 1.4;
+        text-align: left; }
+      .about__info__skill-list {
+        font-size: 3.5rem; } }
 
 .experience {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   justify-self: center;
   position: relative;
   color: #0a192f; }
+  .experience span {
+    color: #64ffda;
+    font-family: "Roboto Mono", "Roboto";
+    font-size: 2rem;
+    margin-right: 0.7rem; }
   .experience .paragraph {
     max-width: 65rem;
     text-align: justify;
     font-weight: 400; }
   .experience__head {
-    text-align: center;
-    padding: 4rem 4rem 1.5rem 4rem;
+    justify-content: flex-start;
     border-radius: 0.5rem;
-    margin-bottom: 5rem; }
+    margin-bottom: 3rem; }
     .experience__head--text {
       display: flex;
       -webkit-box-align: center;
@@ -699,9 +787,7 @@ button {
       white-space: nowrap;
       color: #e6f1ff; }
     .experience__head-paragraph {
-      font-size: 1.6rem;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 1.8rem;
       font-weight: 300;
       max-width: 600px;
       text-align: justify; }
@@ -710,13 +796,13 @@ button {
     display: flex;
     flex-direction: column; }
     .experience__lists--topics {
-      padding: 2rem;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      justify-content: center;
-      justify-items: center; }
+      grid-template-columns: repeat(4, 1fr); }
       .experience__lists--topics .btn:hover {
+        border-bottom: 2px solid #64ffda; }
+      .experience__lists--topics .btn:active {
+        border-bottom: 2px solid #64ffda; }
+      .experience__lists--topics:active {
         border-bottom: 2px solid #64ffda; }
     .experience__lists--details__icon {
       margin-top: 3rem;
@@ -734,14 +820,14 @@ button {
           fill: #64ffda;
           stroke-width: 15rem;
           margin-bottom: 2.5rem; } }
-  .experience--details__icon-box {
+  .experience__icon-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 15vh;
     height: 100%; }
-  .experience--details__icon {
+  .experience__icon {
     margin-top: 3rem;
     width: 15rem;
     height: 15rem;
@@ -750,13 +836,20 @@ button {
     margin-bottom: 2.5rem;
     margin: 0; }
     @media only screen and (max-width: 50em) {
-      .experience--details__icon {
+      .experience__icon {
         margin-top: 2rem;
         width: 8rem;
         height: 8rem;
         fill: #64ffda;
         stroke-width: 15rem;
         margin-bottom: 2.5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .experience {
+      padding: 5rem; }
+      .experience__head-paragraph {
+        max-width: 100%;
+        font-size: 4rem;
+        text-align: left; } }
 
 .operations__content {
   display: none; }
@@ -772,7 +865,8 @@ button {
   grid-template-columns: 20rem 1fr;
   gap: 5rem;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
-  border-radius: 0.7rem; }
+  border-radius: 0.7rem;
+  background-color: rgba(100, 255, 218, 0.1); }
   .operations__content--active .info {
     display: flex;
     flex-direction: column;

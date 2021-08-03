@@ -129,4 +129,8 @@
             }
         }
     }
+
+    @media only screen and (max-width: $bp-smallest) {
+        padding: 5rem;
+    }
 }

@@ -69,6 +69,11 @@
             &:active {
                 border-bottom: 2px solid $green;
             }
+
+            @media only screen and (max-width: $bp-smallest) {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         &--details {
@@ -87,6 +92,17 @@
     &__icon {
         @include icon-style;
         margin: 0;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        padding: 5rem;
+
+        .paragraph {
+            max-width: 100%;
+            text-align: justify;
+            font-size: 4rem;
+            margin-bottom: 5rem;
+        }
     }
 }
 
@@ -138,9 +154,14 @@
                         align-items: flex-start;
 
                         li {
+                            font-size: 2rem;
                             &::before {
                                 content: "\290D";
                                 color: $green;
+
+                                @media only screen and (max-width: $bp-smallest) {
+                                    display: none;
+                                }
                             }
                         }
                     }
@@ -155,9 +176,14 @@
                         align-items: flex-start;
 
                         li {
+                            font-size: 2.5rem;
                             &::before {
                                 content: "\290D";
                                 color: $green;
+
+                                @media only screen and (max-width: $bp-smallest) {
+                                    display: none;
+                                }
                             }
                         }
                     }

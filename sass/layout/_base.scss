@@ -12,6 +12,7 @@
     grid-column: main-start / main-end;
 
     display: grid;
-    grid-template-columns: minmax(min-content, 88vw);
+    grid-template-columns: minmax(min-content, 1fr);
     justify-content: center;
+    max-width: 100%;
 }
