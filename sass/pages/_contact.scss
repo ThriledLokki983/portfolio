@@ -1,5 +1,5 @@
 .contact {
-    max-width: 600px;
+    max-width: 60rem;
     margin: 0px auto 100px;
     text-align: center;
 
@@ -30,6 +30,7 @@
     &__info {
         font-size: 1.7rem;
         color: $slate;
+        font-weight: 300;
     }
 
     &__email-link {
@@ -50,7 +51,25 @@
 
     & a {
         display: inline-block;
-        text-decoration-skip-ink: auto;
         position: relative;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+        // @include mobile-layout;
+        margin: 5rem 0 25rem 0;
+        padding: 0 2.5rem;
+        max-width: 100%;
+        width: 100%;
+
+        &__info {
+            text-align: justify;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        a {
+            align-self: center;
+            font-size: 2rem;
+            padding: 2rem;
+        }
     }
 }

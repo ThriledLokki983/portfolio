@@ -1,82 +1,83 @@
 .header {
-    grid-column: left-start / right-end;
-    padding: 1rem;
-    box-shadow: $shadow-dark;
-    position: relative;
+    grid-area: head-start / left-start / head-end / right-end;
+    width: 99vw;
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1.5rem 10rem;
+    box-shadow: $shadow-dark;
 
     &__logo-box {
-        position: relative;
-        width: 20%;
-        height: 20%;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
         animation: moveInLeft 1.2s ease-out;
 
-        &--logo {
-            width: 8rem;
-            height: 8rem;
+        display: flex;
+        align-items: center;
+
+        .logo {
+            width: 4rem;
+            height: 4rem;
         }
     }
 
     &__nav {
-        justify-content: end;
-        gap: 1rem;
-        padding-right: 5rem;
+        align-self: center;
 
         &--list {
-            gap: 0.5rem;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
             animation: moveInRight 1.2s ease-out;
         }
 
         &--item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 1.3rem;
+            list-style: none;
+            font-size: 1.7rem;
 
             & span {
                 margin-right: 0.4rem;
                 color: $green;
                 font-family: $font-robo-mono;
+                font-size: 1.3rem;
+
+                display: flex;
+                align-items: center;
             }
         }
 
         &--link:link,
         &--link:visited {
             text-decoration: none;
-            text-transform: capitalize;
             display: block;
             padding: 0.5rem 1.5rem;
             color: $white;
             display: flex;
-            align-items: center;
         }
     }
 
-    svg {
-        width: 100%;
-        // margin: 0 auto;
-        // fill: none;
-    }
+    @media only screen and (max-width: $bp-smallest) {
+        grid-column: main-start / main-end;
+        grid-row: 1 / 2;
+        transition: all 0.4s;
+        position: fixed;
+        background-color: inherit;
+        box-shadow: $shadow-dark;
 
-    @media only screen and (max-width: $bp-large) {
         padding: 1.5rem 1rem;
 
         &__logo-box {
-            position: relative;
-            width: 100%;
-            height: 100%;
+            display: none;
+            padding-left: 1rem;
             animation: moveInLeft 1.2s ease-out;
+            position: relative;
 
             &--logo {
-                width: 10rem;
-                height: 10rem;
-                margin-left: -10rem;
+                width: 5rem;
+                height: 5rem;
             }
         }
 
@@ -85,16 +86,16 @@
         }
 
         &__nav {
-            height: 100%;
-            width: 100%;
+            display: flex;
+            padding-right: 1rem;
             animation: moveInRight 1.2s ease-out;
+            margin-left: auto;
 
             &:before {
                 content: "";
                 display: inline-block;
-                height: 10rem;
-                width: 10rem;
-                margin-left: 50rem;
+                height: 5rem;
+                width: 5rem;
                 cursor: pointer;
 
                 @supports (-webkit-mask-image: url()) or (mask-image: url()) {
@@ -107,28 +108,15 @@
             }
         }
     }
-
-    @media only screen and (max-width: $bp-small) {
-        padding: 2rem;
-        &__logo-box {
-            cursor: pointer;
-            position: relative;
-            width: 100%;
-            height: 100%;
-            animation: moveInLeft 1.2s ease-out;
-            margin-left: -10rem;
-
-            &--logo {
-                width: 10rem;
-                height: 10rem;
-                margin-left: 5rem;
-            }
-        }
-    }
 }
 
-/* nav and stickly class at the same time */
-.header.sticky {
-    position: fixed;
-    background-color: rgba(255, 255, 255, 0.95);
-}
+// .navigation.sticky {
+//     position: fixed;
+//     box-shadow: $shadow-dark;
+//     width: 100%;
+//     padding: 0.5rem 20rem 0 0;
+// }
+
+// .navigation {
+//     display: flex;
+// }

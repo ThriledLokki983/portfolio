@@ -1,12 +1,13 @@
-/** @format */
-
 .page__layout {
+    width: 100vw;
     display: grid;
 
     grid-template-columns:
         [left-start] 1fr [left-end main-start] minmax(min-content, 90vw)
         [main-end right-start] 1fr [right-end];
-    grid-gap: 1rem;
+    grid-template-rows:
+        [head-start] 1fr [head-end cont-start] minmax(auto-fit, max-content)
+        [cont-end foot-start] 1fr [foot-end];
 
     @media only screen and (max-width: $bp-largest) {
     }
@@ -15,32 +16,26 @@
     }
 
     @media only screen and (max-width: $bp-small) {
-        display: grid;
-        grid-template-columns: minmax(min-content, 1fr);
+        grid-template-columns: [main-start] minmax(min-content, 90vw) [main-end];
     }
 
     @media only screen and (max-width: $bp-smallest) {
-        display: grid;
-        grid-template-columns: minmax(auto-fit, 1fr);
+        grid-template-columns: [main-start] minmax(min-content, 90vw) [main-end];
     }
 }
 
 section {
     margin: 0px auto;
     padding: 10rem 0px;
-    width: 100%;
+    max-width: 100%;
 
-    @media only screen and (max-width: $bp-large) {
-    }
+    // border: 1px solid red;
 
     @media only screen and (max-width: $bp-small) {
         margin: 0;
-        padding: 5rem 1rem;
     }
 
     @media only screen and (max-width: $bp-smallest) {
         margin: 0;
-        padding: 0;
-        // border: 1px solid red;
     }
 }

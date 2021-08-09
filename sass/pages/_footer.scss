@@ -1,6 +1,8 @@
 .footer {
-    display: grid;
+    width: 99vw;
     grid-column: left-start / right-end;
+    grid-row: 4 / 5;
+    // background-color: $color-primary;
 
     display: flex;
     -webkit-box-pack: center;
@@ -13,14 +15,36 @@
     padding: 15px;
     text-align: center;
 
-    &__box {
+    .info,
+    .github-stats {
         color: rgba($light-slate, 0.6);
+    }
+
+    &__box {
         font-family: $font-robo-mono;
         font-size: 1.2rem;
         line-height: 1;
 
-        & a:hover {
-            color: $green;
+        & a {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        &:hover {
+            .info,
+            .github-stats {
+                color: $green;
+
+                & svg {
+                    fill: $green;
+                }
+
+                & > span {
+                    .icon {
+                        fill: $green;
+                    }
+                }
+            }
         }
     }
 
@@ -32,10 +56,6 @@
             -webkit-box-align: center;
             align-items: center;
             margin: 0px 0.7rem;
-
-            .icon:hover {
-                fill: $green;
-            }
         }
 
         & svg {
@@ -43,18 +63,12 @@
             margin-right: 0.5rem;
             width: 1.4rem;
             height: 1.4rem;
+            fill: rgba($light-slate, 0.6);
         }
+    }
 
-        &:hover {
-            & svg {
-                fill: $green;
-            }
-
-            & > span {
-                .icon {
-                    fill: $green;
-                }
-            }
-        }
+    @media only screen and (max-width: $bp-smallest) {
+        grid-column: main-start / main-end;
+        grid-row: 3 / 4;
     }
 }

@@ -128,9 +128,17 @@
                 }
             }
         }
+
+        @media only screen and (max-width: $bp-smallest) {
+            display: grid;
+            grid-template-columns: minmax(10rem, 1fr);
+        }
     }
 
     @media only screen and (max-width: $bp-smallest) {
-        padding: 5rem;
+        min-height: 100vh;
+        margin-top: 60rem;
+        padding: 0 2.5rem;
+        max-width: 100%;
     }
 }

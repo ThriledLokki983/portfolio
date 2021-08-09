@@ -11,10 +11,6 @@
     color: $light-slate;
     overflow: hidden;
 
-    &:hover {
-        color: $green;
-    }
-
     @media only screen and (max-width: $bp-smallest) {
         display: none;
     }
@@ -58,6 +54,10 @@
     text-decoration-skip-ink: auto;
     color: $lightest-slate;
     position: relative;
+
+    &:hover {
+        color: $green;
+    }
 }
 
 .left {
@@ -113,7 +113,5 @@
 
     &:hover {
         fill: $green;
-        border: 1px solid $green;
-        margin: 1rem;
     }
 }

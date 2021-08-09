@@ -1,0 +1,63 @@
+.modal {
+    &__nav {
+        height: 70vh;
+        width: 100vw;
+        background-color: rgba($dark-navy, 0.2);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            visibility: hidden;
+        }
+
+        &--list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            animation: moveInRight 1.2s ease-out;
+            margin-bottom: 2rem;
+        }
+
+        &--link {
+            display: flex;
+            color: $white;
+            font-size: 3rem;
+            text-decoration: none;
+        }
+
+        &--item {
+            list-style: none;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+
+            & span {
+                margin-right: 1rem;
+                color: $green;
+                font-family: $font-robo-mono;
+                font-size: 1.3rem;
+
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &--link:link,
+    &--link:visited {
+        text-decoration: none;
+        padding: 0.5rem 1.5rem;
+        color: $white;
+    }
+}
+
+.modal .hidden {
+    display: none;
+    opacity: 0;
+}
+
+.modal__nav .hidden {
+    display: none;
+    opacity: 0;
+}

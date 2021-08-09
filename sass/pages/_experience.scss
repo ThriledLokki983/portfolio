@@ -1,31 +1,19 @@
 .experience {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    justify-self: center;
-    position: relative;
-
-    color: $dark_navy;
-
-    // border: 1px solid #fff;
+    @include section-layout;
 
     & span {
         @include span-style;
     }
 
     .paragraph {
-        max-width: 65rem;
-        text-align: justify;
-        font-weight: 400;
+        @include text-style;
+        margin-bottom: 1.5rem;
     }
 
     &__head {
         justify-content: flex-start;
         border-radius: 0.5rem;
         margin-bottom: 3rem;
-
-        // background-color: rgba($light-navy, 0.3);
 
         &--text {
             display: flex;
@@ -42,11 +30,9 @@
         &-paragraph {
             font-size: 1.8rem;
             font-weight: 300;
-            max-width: 600px;
             text-align: justify;
         }
     }
-
     &__lists {
         color: #fff;
 
@@ -54,32 +40,49 @@
         flex-direction: column;
 
         &--topics {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-
             .btn {
+                margin-right: 1rem;
+
+                h3 {
+                    color: $green;
+                    font-family: $font-robo-mono;
+                    font-size: 1.3rem;
+                }
+
                 &:hover {
-                    border-bottom: 2px solid $green;
-                }
-                &:active {
-                    border-bottom: 2px solid $green;
+                    cursor: pointer;
+                    border: 1px solid $slate;
+                    h3 {
+                        cursor: pointer;
+                        color: $green;
+                    }
                 }
             }
 
-            &:active {
-                border-bottom: 2px solid $green;
-            }
+            .btn-1 {
+                margin-right: 1rem;
+                border: 1px solid $slate;
 
-            @media only screen and (max-width: $bp-smallest) {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                h3 {
+                    color: $slate;
+                    font-family: $font-robo-mono;
+                    font-size: 1.3rem;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    border: 1px solid $slate;
+                    h3 {
+                        cursor: pointer;
+                        color: $slate;
+                    }
+                }
             }
         }
 
         &--details {
             &__icon {
                 @include icon-style;
-                margin: 0;
             }
         }
     }
@@ -95,13 +98,25 @@
     }
 
     @media only screen and (max-width: $bp-smallest) {
-        padding: 5rem;
+        @include mobile-layout;
 
         .paragraph {
-            max-width: 100%;
-            text-align: justify;
-            font-size: 4rem;
-            margin-bottom: 5rem;
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        &__lists {
+            &--topics {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            &--details {
+                &__icon {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 }
@@ -111,33 +126,27 @@
         display: none;
     }
 
-    &__tab {
-        margin-right: 2.5rem;
-        transform: translateY(-50%);
-
-        &--active {
-            transform: translateY(-66%);
-        }
-    }
-
     &__content--active {
+        margin-top: 2rem;
         display: grid;
-        grid-template-columns: 20rem 1fr;
-        gap: 5rem;
-        box-shadow: $shadow-dark;
-        border-radius: 0.7rem;
+        grid-template-columns: 15rem 1fr;
+        align-items: center;
+
+        border-radius: 0.5rem;
         background-color: rgba($green, 0.1);
 
+        box-shadow: $shadow-dark;
+        max-width: 80%;
+
         .info {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            padding: 3rem;
+            @include flex-column-start;
+            padding: 0 2rem;
 
             &-b {
+                margin-bottom: 2rem;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                // gap: 1rem;
+                gap: 2rem;
 
                 .item__lists-tools {
                     display: grid;
@@ -145,55 +154,38 @@
                 }
 
                 &-extra {
-                    display: flex;
-                    flex-direction: column;
-                    align-self: flex-start;
-                    justify-self: flex-start;
+                    @include flex-column-start;
 
                     & ul {
-                        align-items: flex-start;
-
-                        li {
-                            font-size: 2rem;
-                            &::before {
-                                content: "\290D";
-                                color: $green;
-
-                                @media only screen and (max-width: $bp-smallest) {
-                                    display: none;
-                                }
-                            }
-                        }
+                        @include list-style;
                     }
 
                     & h4 {
-                        text-align: left;
+                        @include experience-header-style;
                     }
                 }
 
                 &-tools {
                     & ul {
-                        align-items: flex-start;
-
-                        li {
-                            font-size: 2.5rem;
-                            &::before {
-                                content: "\290D";
-                                color: $green;
-
-                                @media only screen and (max-width: $bp-smallest) {
-                                    display: none;
-                                }
-                            }
-                        }
+                        @include list-style;
                     }
 
                     h4 {
-                        display: flex;
+                        @include experience-header-style;
                     }
                 }
             }
         }
+
+        @media only screen and (max-width: $bp-smallest) {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+        }
+    }
+    @media only screen and (max-width: $bp-smallest) {
+        margin: 0;
+        padding: 0;
     }
 }
 .operations__icon.operations__icon--1 {

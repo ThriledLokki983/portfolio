@@ -1,50 +1,52 @@
-/** @format */
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    margin: 0px 0px 10px;
+    // margin: 0px 0px 10px;
     font-weight: 600;
     color: $lightest-slate;
     line-height: 1.1;
     font-family: $font-robo;
+    padding: 0.5rem;
 }
 
 .heading__main {
-    margin: 0;
+    padding: 2rem;
 
     &-primary {
         font-weight: 700;
         color: $white;
         font-family: $font-primary;
         line-height: 1.1;
-        font-size: clamp(6rem, 20vw, 8rem);
+        font-size: clamp(6rem, 10vw, 10rem);
         display: block;
         margin-bottom: 1rem;
 
         @media only screen and (max-width: $bp-small) {
-            font-size: 10rem;
+            font-size: 8rem;
         }
 
         @media only screen and (max-width: $bp-smallest) {
-            font-size: 10rem;
+            font-size: 5rem;
         }
     }
 
     &-secondary {
         color: $slate;
         line-height: 0.9;
-        font-size: clamp(5rem, 20vw, 6rem);
+        font-size: clamp(6rem, 9vw, 8rem);
         display: block;
         font-family: $font-primary;
-        margin-bottom: 1.5rem;
         font-weight: 700;
 
+        @media only screen and (max-width: $bp-small) {
+            font-size: 8rem;
+        }
+
         @media only screen and (max-width: $bp-smallest) {
-            font-size: 7.5rem;
+            font-size: 5rem;
         }
     }
 
@@ -52,9 +54,13 @@ h6 {
         text-align: center;
         color: $green;
         padding-bottom: 1rem;
-        font-size: clamp(1.7rem, 4vw, 1.7rem);
+        font-size: 1.8rem;
         font-family: $font-robo-mono;
         font-weight: 600;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 5rem;
+        }
 
         @media only screen and (max-width: $bp-smallest) {
             font-size: 3rem;
@@ -63,17 +69,13 @@ h6 {
 }
 
 .paragraph {
-    margin: 20px 0px 0px;
-    max-width: 50.5rem;
+    // max-width: 70%;
     margin-block-start: 1em;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: $slate;
+    line-height: 1.3;
     font-family: $font-robo;
-    margin-bottom: $mb-md;
-
-    &__home-text {
-        margin-bottom: 1rem;
-    }
+    text-align: justify;
 
     &__link:visited,
     &__link:active {
@@ -102,10 +104,14 @@ h6 {
         font-weight: 500;
     }
 
-    @media only screen and (max-width: $bp-smallest) {
-        margin: 0;
+    @media only screen and (max-width: $bp-small) {
         max-width: 100%;
-        font-size: 4rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        max-width: 100%;
+        font-size: 2rem;
+        line-height: 1.5;
     }
 }
 
@@ -115,7 +121,6 @@ h6 {
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    margin: 0.5rem 0px 3rem;
     width: 100%;
     font-size: clamp(3rem, 5vw, 3rem);
     white-space: nowrap;
@@ -127,7 +132,6 @@ h6 {
         position: relative;
         bottom: 4px;
         content: "";
-        margin-right: 10px;
         color: $green;
         font-family: $font-robo;
         font-size: clamp(3rem, 5vw, 3rem);
@@ -139,7 +143,7 @@ h6 {
         display: block;
         position: relative;
         top: 2px;
-        width: 300px;
+        width: 30rem;
         height: 1px;
         margin-left: 2rem;
         opacity: 0.3;
@@ -151,55 +155,21 @@ h6 {
     @media only screen and (max-width: $bp-large) {
         font-size: clamp(4rem, 5vw, 4rem);
         margin: 0;
-        width: 80%;
+        max-width: 95%;
     }
     @media only screen and (max-width: $bp-small) {
         font-size: 5rem;
         margin-bottom: 3.5rem;
+        &::after {
+            width: 15rem;
+        }
     }
     @media only screen and (max-width: $bp-smallest) {
-        font-size: 5rem;
+        font-size: 3.5rem;
         margin-bottom: 3.5rem;
-    }
-}
 
-.item__lists {
-    &-enjoy {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 5rem;
-
-        &--list {
-            @include list-style;
+        &::after {
+            width: 15rem;
         }
-    }
-
-    &-tools {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 5rem;
-
-        &--list {
-            @include list-style;
-        }
-    }
-}
-
-.topic__heading {
-    font-family: $font-robo-mono;
-    font-size: 1.6rem;
-    color: $lightest-slate;
-
-    &:hover {
-        cursor: pointer;
-        color: $green;
-    }
-
-    @media only screen and (max-width: $bp-smallest) {
-        font-size: 3rem;
     }
 }

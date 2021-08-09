@@ -1,22 +1,36 @@
 .projects {
-    margin-top: 15rem;
+    @include section-layout;
+    // border: 1px solid red;
+
+    & span {
+        @include span-style;
+    }
+
+    a {
+        display: inline-blesock;
+        color: inherit;
+        text-decoration: none;
+        text-decoration-skip-ink: auto;
+    }
+
+    &-container {
+        max-width: 1000px;
+        margin: 50px auto;
+
+        @media only screen and (max-width: $bp-smallest) {
+            @include mobile-layout;
+        }
+
+        & span {
+            @include span-style;
+        }
+    }
 
     @media only screen and (max-width: $bp-smallest) {
-        padding: 5rem;
+        max-width: 100%;
+        width: 100%;
+        margin-top: 20rem;
     }
-}
-
-a {
-    display: inline-blesock;
-    color: inherit;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-}
-
-button {
-    border: 0;
-    outline: 0;
-    cursor: pointer;
 }
 
 ul,
@@ -37,255 +51,257 @@ img {
     vertical-align: middle;
 }
 
-.project-container {
-    max-width: 1000px;
-    margin: 50px auto;
+.project {
+    &__right {
+        @include project-alignment;
+        margin-bottom: 15rem;
 
-    & span {
-        @include span-style;
-    }
-}
+        &-img {
+            @include photo-effect;
+            border-radius: 2px;
+            grid-column: 1 / 8;
+            grid-row: 1 / -1;
+            box-shadow: $shadow-bot;
 
-.project__right {
-    @include project-alignment;
-    margin-bottom: 15rem;
-    // box-shadow: $shadow-bot;
+            &:hover {
+                background: none;
+                cursor: pointer;
+            }
 
-    &-container {
-        & h2 {
-            margin-bottom: 5rem;
-        }
-    }
-
-    &-label {
-        color: #64ffda;
-        font-family: $font-robo-mono;
-        font-size: 1.2rem;
-
-        display: flex;
-        justify-content: flex-end;
-
-        @include tablet {
-            justify-content: flex-start;
-        }
-    }
-
-    &-title {
-        font-size: 3rem;
-        margin: 10px 0 30px;
-        font-family: $font-robo;
-        color: #eee;
-
-        display: flex;
-        justify-content: flex-end;
-        @include tablet {
-            justify-content: flex-start;
-        }
-    }
-
-    &-links {
-        &-icon {
-            @include project-icons;
-        }
-    }
-
-    &-details {
-        font-size: 15px;
-        line-height: 1.5;
-        color: #aaa;
-
-        p {
-            border: 1px solid rgba($slate, 0.1);
-            background-color: $light-navy;
-            padding: 20px 25px;
-            box-shadow: $shadow-dark;
-            border-radius: 0.3rem;
-            font-weight: 300;
-            text-align: justify;
-
+            @media screen and (max-width: $bp-smallest) {
+                height: 95%;
+            }
             @include tablet {
-                background-color: transparent;
-                padding: 20px;
+                grid-column: 1 / -1;
+                opacity: 0.25;
+            }
+
+            &:before {
+                @include before-effect;
+            }
+
+            img {
+                border-radius: 2px;
+                position: relative;
+                mix-blend-mode: multiply;
+                filter: grayscale(100%) contrast(1);
+
+                @media screen and (max-width: $bp-small) {
+                    object-fit: cover;
+                    width: auto;
+                    height: 100%;
+                }
+
+                &:hover {
+                    background: none;
+                    cursor: pointer;
+                }
             }
         }
 
-        ul {
+        &-container {
+            @media only screen and (max-width: $bp-smallest) {
+                @include mobile-layout;
+            }
+
+            & h2 {
+                margin-bottom: 5rem;
+            }
+        }
+
+        &-label {
+            color: #64ffda;
+            font-family: $font-robo-mono;
+            font-size: 1.2rem;
+
             display: flex;
-            margin-top: 20px;
             justify-content: flex-end;
 
             @include tablet {
                 justify-content: flex-start;
             }
+        }
 
-            li {
-                @include ul-style;
+        &-title {
+            font-size: 3rem;
+            margin: 10px 0 30px;
+            font-family: $font-robo;
+            color: #eee;
+
+            display: flex;
+            justify-content: flex-end;
+            @include tablet {
+                justify-content: flex-start;
             }
         }
-    }
 
-    @media screen and (max-width: 768px) {
-        align-items: flex-start;
-    }
-}
-
-.project__left {
-    @include project-alignment;
-    margin-bottom: 15rem;
-    // box-shadow: $shadow-bot;
-
-    &-container {
-        & h2 {
-            margin-bottom: 5rem;
+        &-links {
+            &-icon {
+                @include project-icons;
+            }
         }
-    }
 
-    &-label {
-        color: #64ffda;
-        font-family: $font-robo-mono;
-        font-size: 1.2rem;
-    }
+        &-details {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #aaa;
 
-    &-title {
-        font-size: 3rem;
-        margin: 10px 0 30px;
-        font-family: $font-robo;
-        color: #eee;
-    }
+            p {
+                border: 1px solid rgba($slate, 0.1);
+                background-color: $light-navy;
+                padding: 20px 25px;
+                box-shadow: $shadow-dark;
+                border-radius: 0.3rem;
+                font-weight: 300;
+                text-align: justify;
 
-    &-links {
-        &-icon {
-            @include project-icons;
+                @include tablet {
+                    background-color: transparent;
+                    padding: 20px;
+                }
+            }
+
+            ul {
+                display: flex;
+                margin-top: 20px;
+                justify-content: flex-end;
+
+                @include tablet {
+                    justify-content: flex-start;
+                }
+
+                li {
+                    @include ul-style;
+                }
+            }
         }
-    }
 
-    &-details {
-        font-size: 15px;
-        line-height: 1.5;
-        color: #aaa;
-
-        p {
-            border: 1px solid rgba($slate, 0.1);
-            background-color: $light-navy;
-            padding: 20px 25px;
-            box-shadow: $shadow-dark;
-            border-radius: 0.3rem;
-            font-weight: 300;
-            text-align: justify;
+        &-content {
+            position: relative;
+            grid-column: 7 / 13;
+            grid-row: 1 / -1;
 
             @include tablet {
-                background-color: transparent;
-                padding: 20px;
+                grid-column: 1 / -1;
+                padding: 2rem;
             }
         }
 
-        ul {
-            display: flex;
-            margin-top: 20px;
+        @media screen and (max-width: $bp-small) {
+            align-items: flex-start;
+        }
+    }
 
-            li {
-                @include ul-style;
+    &__left {
+        @include project-alignment;
+        margin-bottom: 15rem;
+
+        &-img {
+            @include photo-effect;
+            border-radius: 2px;
+            grid-column: 6 / -1;
+            grid-row: 1 / -1;
+            box-shadow: $shadow-bot;
+
+            @media screen and (max-width: $bp-small) {
+                height: 95%;
+            }
+            @include tablet {
+                grid-column: 1 / -1;
+                opacity: 0.25;
+            }
+
+            &:before {
+                @include before-effect;
+            }
+
+            img {
+                border-radius: 2px;
+                position: relative;
+                mix-blend-mode: multiply;
+                filter: grayscale(100%) contrast(1);
+
+                @media screen and (max-width: $bp-smallest) {
+                    object-fit: cover;
+                    width: auto;
+                    height: 100%;
+                }
             }
         }
-    }
 
-    @media screen and (max-width: 768px) {
-        align-items: flex-start;
-    }
-}
-
-.project__left-content {
-    @include project-content;
-
-    @include tablet {
-        grid-column: 1 / -1;
-        padding: 40px;
-    }
-}
-
-.project__right-content {
-    position: relative;
-    grid-column: 7 / 13;
-    grid-row: 1 / -1;
-
-    @include tablet {
-        grid-column: 1 / -1;
-        padding: 40px;
-    }
-}
-
-.project__right-img {
-    @include photo-effect;
-    border-radius: 2px;
-    grid-column: 1 / 8;
-    grid-row: 1 / -1;
-    box-shadow: $shadow-bot;
-
-    &:hover {
-        background: none;
-        cursor: pointer;
-    }
-
-    @media screen and (max-width: 768px) {
-        height: 90%;
-    }
-    @include tablet {
-        grid-column: 1 / -1;
-        opacity: 0.25;
-    }
-
-    &:before {
-        @include before-effect;
-    }
-
-    img {
-        border-radius: 2px;
-        position: relative;
-        mix-blend-mode: multiply;
-        filter: grayscale(100%) contrast(1);
-
-        @media screen and (max-width: 768px) {
-            object-fit: cover;
-            width: auto;
-            height: 100%;
+        &-container {
+            & h2 {
+                margin-bottom: 5rem;
+            }
         }
 
-        &:hover {
-            background: none;
-            cursor: pointer;
+        &-label {
+            color: #64ffda;
+            font-family: $font-robo-mono;
+            font-size: 1.2rem;
+        }
+
+        &-title {
+            font-size: 3rem;
+            margin: 10px 0 30px;
+            font-family: $font-robo;
+            color: #eee;
+        }
+
+        &-links {
+            &-icon {
+                @include project-icons;
+            }
+        }
+
+        &-details {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #aaa;
+
+            p {
+                border: 1px solid rgba($slate, 0.1);
+                background-color: $light-navy;
+                padding: 20px 25px;
+                box-shadow: $shadow-dark;
+                border-radius: 0.3rem;
+                font-weight: 300;
+                text-align: justify;
+
+                @include tablet {
+                    background-color: transparent;
+                    padding: 20px;
+                }
+            }
+
+            ul {
+                display: flex;
+                margin-top: 20px;
+
+                li {
+                    @include ul-style;
+                }
+            }
+        }
+
+        &-content {
+            @include project-content;
+
+            @include tablet {
+                grid-column: 1 / -1;
+                padding: 2rem;
+            }
+        }
+
+        @media screen and (max-width: $bp-small) {
+            align-items: flex-start;
         }
     }
-}
 
-.project__left-img {
-    @include photo-effect;
-    border-radius: 2px;
-    grid-column: 6 / -1;
-    grid-row: 1 / -1;
-    box-shadow: $shadow-bot;
-
-    @media screen and (max-width: 768px) {
-        height: 90%;
-    }
-    @include tablet {
-        grid-column: 1 / -1;
-        opacity: 0.25;
-    }
-
-    &:before {
-        @include before-effect;
-    }
-
-    img {
-        border-radius: 2px;
-        position: relative;
-        mix-blend-mode: multiply;
-        filter: grayscale(100%) contrast(1);
-
-        @media screen and (max-width: 768px) {
-            object-fit: cover;
-            width: auto;
-            height: 100%;
+    &-container {
+        @media only screen and (max-width: $bp-smallest) {
+            @include mobile-layout;
+            margin-top: 40rem;
         }
     }
 }
