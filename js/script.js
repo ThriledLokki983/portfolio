@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 const listItems = function (item) {
-	containerMovements.innerHTML = "";
+	// containerMovements.innerHTML = "";
 
 	item.forEach(function (mov, i) {});
 };
