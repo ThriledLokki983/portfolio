@@ -1,12 +1,12 @@
 "use-strict";
 window.addEventListener("DOMContentLoaded", (event) => {
-    const docWidth = document.documentElement.offsetWidth;
+    // const docWidth = document.documentElement.offsetWidth;
 
-    [].forEach.call(document.querySelectorAll("*"), function (el) {
-        if (el.offsetWidth > docWidth) {
-            console.log(el);
-        }
-    });
+    // [].forEach.call(document.querySelectorAll("*"), function (el) {
+    //     if (el.offsetWidth > docWidth) {
+    //         console.log(el);
+    //     }
+    // });
 
     // const nav = document.querySelector(".navigation");
     const mobile_logo = document.querySelector(".header__nav");
@@ -35,6 +35,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     };
 
     logoBox.addEventListener("click", function (e) {
+        console.log("logoBox clicked");
         if (e.target.classList.contains("header__logo-box--text")) {
             home.scrollIntoView({
                 behavior: "smooth",
