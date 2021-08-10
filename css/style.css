@@ -103,6 +103,7 @@ section {
   @media only screen and (max-width: 37.5em) {
     .content {
       margin: auto;
+      pad: 0;
       align-items: center; } }
 
 .base {
