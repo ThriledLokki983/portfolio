@@ -526,7 +526,8 @@ h6 {
   flex-direction: column;
   justify-content: center; }
   .home__text {
-    max-width: 50rem; }
+    max-width: 50rem;
+    font-weight: 300; }
   .home__start {
     padding-left: 1rem;
     font-size: 1.4rem;
@@ -569,7 +570,8 @@ h6 {
         margin-bottom: 0;
         text-align: justify;
         font-size: 1.8rem;
-        line-height: 1.4; }
+        line-height: 1.4;
+        font-weight: 300; }
     .about__info__skill-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
