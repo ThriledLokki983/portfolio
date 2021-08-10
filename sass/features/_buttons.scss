@@ -5,6 +5,12 @@ button {
     background-color: inherit;
     border: 1px solid $green;
     color: $green;
+    opacity: 0.8;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
 }
 
 .header__btn {
