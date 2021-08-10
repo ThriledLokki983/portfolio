@@ -35,7 +35,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     };
 
     logoBox.addEventListener("click", function (e) {
-        console.log("logoBox clicked");
         if (e.target.classList.contains("header__logo-box--text")) {
             home.scrollIntoView({
                 behavior: "smooth",
