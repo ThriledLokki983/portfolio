@@ -1,6 +1,8 @@
 /** @format */
 
 "use-strict";
+import { experience, projects } from "data.js";
+
 window.addEventListener("DOMContentLoaded", (event) => {
 	// const docWidth = document.documentElement.offsetWidth;
 

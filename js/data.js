@@ -1,6 +1,6 @@
 /** @format */
 
-const projects = [
+export const projects = [
 	{
 		id: 1,
 		name: "Mapty App",
@@ -47,7 +47,7 @@ const projects = [
 	},
 ];
 
-const experience = [
+export const experience = [
 	{
 		id: 1,
 		name: "front",
