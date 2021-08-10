@@ -2,6 +2,30 @@
 
 "use strict";
 
+//ANIMATION
+const anim = anime.timeline({
+    easing: "easeOutExpo",
+    duration: 750,
+});
+
+anim.add({
+    targets: "#hexagon path",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: "easeInOutQuart",
+    baseFrequency: 0,
+    opacity: 1,
+    duration: 1000,
+    delay: function (el, i) {
+        return i * 250;
+    },
+}).add({
+    targets: "#hexagon #G",
+    baseFrequency: 0,
+    duration: 1500,
+    opacity: 1,
+    easing: "easeInOutQuart",
+});
+
 window.addEventListener("DOMContentLoaded", () => {
     const mobile_logo = document.querySelector(".header__nav");
     const mainContent = document.querySelector(".content");
@@ -13,29 +37,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const tabs = document.querySelectorAll(".operations__tab");
     const tabsContainer = document.querySelector(".operations__tab-container");
     const tabsContent = document.querySelectorAll(".operations__content");
-    const anim = anime.timeline({
-        easing: "easeOutExpo",
-        duration: 750,
-    });
-
-    //ANIMATION
-    anim.add({
-        targets: "#hexagon path",
-        strokeDashoffset: [anime.setDashoffset, 0],
-        easing: "easeInOutQuart",
-        baseFrequency: 0,
-        opacity: 1,
-        duration: 1000,
-        delay: function (el, i) {
-            return i * 250;
-        },
-    }).add({
-        targets: "#hexagon #G",
-        baseFrequency: 0,
-        duration: 1500,
-        opacity: 1,
-        easing: "easeInOutQuart",
-    });
 
     const docWidth = document.documentElement.offsetWidth;
 
