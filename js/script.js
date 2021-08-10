@@ -1,32 +1,14 @@
-/** @format */
+"use-strict";
+window.addEventListener("DOMContentLoaded", (event) => {
+    const docWidth = document.documentElement.offsetWidth;
 
-"use strict";
+    [].forEach.call(document.querySelectorAll("*"), function (el) {
+        if (el.offsetWidth > docWidth) {
+            console.log(el);
+        }
+    });
 
-//ANIMATION
-const anim = anime.timeline({
-    easing: "easeOutExpo",
-    duration: 750,
-});
-
-anim.add({
-    targets: "#hexagon path",
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: "easeInOutQuart",
-    baseFrequency: 0,
-    opacity: 1,
-    duration: 1000,
-    delay: function (el, i) {
-        return i * 250;
-    },
-}).add({
-    targets: "#hexagon #G",
-    baseFrequency: 0,
-    duration: 1500,
-    opacity: 1,
-    easing: "easeInOutQuart",
-});
-
-window.addEventListener("DOMContentLoaded", () => {
+    // const nav = document.querySelector(".navigation");
     const mobile_logo = document.querySelector(".header__nav");
     const mainContent = document.querySelector(".content");
     const modal = document.querySelector(".modal");
@@ -37,16 +19,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const tabs = document.querySelectorAll(".operations__tab");
     const tabsContainer = document.querySelector(".operations__tab-container");
     const tabsContent = document.querySelectorAll(".operations__content");
-
-    const docWidth = document.documentElement.offsetWidth;
-
-    [].forEach.call(document.querySelectorAll("*"), function (el) {
-        if (el.offsetWidth > docWidth) {
-            console.log(el);
-        }
-    });
-
-    // const nav = document.querySelector(".navigation");
 
     const mobileMenu = function () {
         mainContent.classList.toggle("hidden");
@@ -127,3 +99,10 @@ window.addEventListener("DOMContentLoaded", () => {
             .classList.add("btn-1");
     });
 });
+
+// const docWidth = document.documentElement.offsetWidth;
+// [].forEach.call(document.querySelectorAll("*"), function (el) {
+//     if (el.offsetWidth > docWidth) {
+//         console.log(el);
+//     }
+// });
