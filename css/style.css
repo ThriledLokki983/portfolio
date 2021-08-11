@@ -1012,7 +1012,8 @@ img {
         justify-content: flex-start; } }
   .project__right-title {
     font-size: 3rem;
-    margin: 10px 0 30px;
+    margin: 1rem 0 1rem;
+    padding: 0;
     font-family: "Roboto", "Courier New", Courier, monospace, sans-serif;
     color: #eee;
     display: flex;
@@ -1123,7 +1124,8 @@ img {
     font-size: 1.2rem; }
   .project__left-title {
     font-size: 3rem;
-    margin: 10px 0 30px;
+    margin: 1rem 0 1rem;
+    padding: 0;
     font-family: "Roboto", "Courier New", Courier, monospace, sans-serif;
     color: #eee; }
   .project__left-links-icon {

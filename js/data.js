@@ -1,6 +1,6 @@
 export const projects = [
     {
-        id: 1,
+        id: 0,
         name: "Mapty App",
         label: "Featured Project",
         desc: "Search for over 1million+ of recipes for an inspiration of something to cook or\
@@ -21,7 +21,7 @@ export const projects = [
         className: "project__left",
     },
     {
-        id: 2,
+        id: 1,
         name: "Pig Game",
         label: "Featured Project",
         desc: "In this game, two players will have to compete to reach 100pts by\
@@ -43,7 +43,7 @@ export const projects = [
         className: "project__right",
     },
     {
-        id: 3,
+        id: 2,
         name: "Mapty",
         label: "Featured Project",
         desc: "Looking for a personalized training web-app? Check out Mapty, you can\
@@ -64,7 +64,7 @@ export const projects = [
         className: "project__left",
     },
     {
-        id: 4,
+        id: 3,
         name: "Bankist",
         label: "Featured Project",
         desc: " A very modern looking website with scroll-into-view and tons of\
