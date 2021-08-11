@@ -7,7 +7,7 @@ export const projects = [
             create the perfect recipe and save it online so you never forget. With a simple API\
             query, this app will spit out all recipes related to the search word you provide",
         languages: ["Javascript", "GitHub API", "Sass"],
-        photo: "recipe.jpg",
+        photo: "recipe",
         links: [
             {
                 icon: "github",
@@ -29,7 +29,7 @@ export const projects = [
             The strategy is to use the hold button to save any accumulated number. When a value\
             is held, it adds to your overall total points and rolling a 1 will not affect that.",
         languages: ["Javascript", "CSS3"],
-        photo: "pig-game.jpg",
+        photo: "pig-game",
         links: [
             {
                 icon: "github",
@@ -50,7 +50,7 @@ export const projects = [
             record on the map the exact location you would want to cycle or go for running. \
             This simple web-app will keep track of all the activities in one place for your ease of use!",
         languages: ["Javascript", "GitHub API", "Sass"],
-        photo: "mapty.jpg",
+        photo: "mapty",
         links: [
             {
                 icon: "github",
@@ -70,7 +70,7 @@ export const projects = [
         desc: " A very modern looking website with scroll-into-view and tons of\
              animations developed with only CSS and JavaScript.",
         languages: ["Javascript", "CSS3"],
-        photo: "bankist.jpg",
+        photo: "bankist",
         links: [
             {
                 icon: "github",

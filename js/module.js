@@ -45,12 +45,12 @@ export class Project {
         </div>
     
         <div class="${item.className}-img">
-            <img srcset="img/${item.photo}-small.jpg  600w, img/${
+            <img srcset="img/${item.photo}-small.png  600w, img/${
                     item.photo
-                } 1000w"
+                }.jpg 1000w"
                 sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw 300px"
                 alt="Photo ${item.name}"
-                src="img/${item.photo}"/>
+                src="img/${item.photo}.jpg"/>
         </div>
         </div>`;
                 // item.links.map((link) => console.log(link));

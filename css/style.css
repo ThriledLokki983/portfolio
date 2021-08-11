@@ -485,6 +485,7 @@ h6 {
   @media only screen and (max-width: 37.5em) {
     .header {
       grid-column: main-start / main-end;
+      z-index: 10;
       grid-row: 1 / 2;
       transition: all 0.4s;
       position: fixed;
