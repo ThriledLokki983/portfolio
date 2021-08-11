@@ -1,6 +1,7 @@
 .header {
     grid-area: head-start / left-start / head-end / right-end;
     width: 100vw;
+    z-index: 9;
 
     display: flex;
     align-content: center;

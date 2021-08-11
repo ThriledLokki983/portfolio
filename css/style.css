@@ -96,7 +96,6 @@ section {
   grid-row: 2 / 4;
   width: 99vw;
   padding: 0 10vw;
-  z-index: -5;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -444,6 +443,7 @@ h6 {
 .header {
   grid-area: head-start / left-start / head-end / right-end;
   width: 100vw;
+  z-index: 9;
   display: flex;
   align-content: center;
   align-items: center;

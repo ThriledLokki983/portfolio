@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
  * Pass in the Main data and build the icon list together with their external links
  */
 
-const proj = new Project(projects);
+const proj = new Project(projects, 2);
 proj.loadProjects();
 
 const mobileMenu = function () {
