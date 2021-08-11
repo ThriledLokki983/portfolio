@@ -1330,7 +1330,7 @@ img {
     position: relative; }
   @media only screen and (max-width: 37.5em) {
     .contact {
-      margin: 5rem 0 25rem 0;
+      margin: 20rem 0 25rem 0;
       padding: 0 2.5rem;
       max-width: 100%;
       width: 100%; }
