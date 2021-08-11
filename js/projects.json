@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "name": "Mapty App",
+        "label": "Featured Project",
+        "desc": "Search for over 1million+ of recipes for an inspiration of something to cook or create the perfect recipe and save it online so you never forget. With a simple API query, this app will spit out all recipes related to the search word you provide",
+        "languages": ["Javascript", "GitHub API", "Sass"],
+        "photo": "recipe.jpg",
+        "links": [
+            {
+                "icon": "github",
+                "link": "https://github.com/ThriledLokki983/RecipeApp"
+            },
+            {
+                "icon": "external-link",
+                "link": "https://gideon-recipeapp.netlify.app/"
+            }
+        ],
+        "className": "project__left"
+    },
+    {
+        "id": 2,
+        "name": "Pig Game",
+        "label": "Featured Project",
+        "desc": "In this game, two players will have to compete to reach 100pts by rolling a dice. Wait! if you roll a 1, all your accumulated value goes down to 0. The strategy is to use the hold button to save any accumulated number. When a value is held, it adds to your overall total points and rolling a 1 will not affect that.",
+        "languages": ["Javascript", "CSS3"],
+        "photo": "pig-game.jpg",
+        "links": [
+            {
+                "icon": "github",
+                "link": "https://github.com/ThriledLokki983/RecipeApp"
+            },
+            {
+                "icon": "external-link",
+                "link": "https://gideon-recipeapp.netlify.app/"
+            }
+        ],
+        "className": "project__right"
+    },
+    {
+        "id": 3,
+        "name": "Mapty",
+        "label": "Featured Project",
+        "desc": "Looking for a personalized training web-app? Check out Mapty, you can record on the map the exact location you would want to cycle or go for running. This simple web-app will keep track of all the activities in one place for your ease of use!",
+        "languages": ["Javascript", "GitHub API", "Sass"],
+        "photo": "mapty.jpg",
+        "links": [
+            {
+                "icon": "github",
+                "link": "https://github.com/ThriledLokki983/RecipeApp"
+            },
+            {
+                "icon": "external-link",
+                "link": "https://gideon-recipeapp.netlify.app/"
+            }
+        ],
+        "className": "project__left"
+    },
+
+    {
+        "id": 4,
+        "name": "Bankist",
+        "label": "Featured Project",
+        "desc": " A very modern looking website with scroll-into-view and tons of animations developed with only CSS and JavaScript.",
+        "languages": ["Javascript", "CSS3"],
+        "photo": "bankist.jpg",
+        "links": [
+            {
+                "icon": "github",
+                "link": "https://github.com/ThriledLokki983/RecipeApp"
+            },
+            {
+                "icon": "external-link",
+                "link": "https://gideon-recipeapp.netlify.app/"
+            }
+        ],
+        "className": "project__right"
+    }
+]
