@@ -143,3 +143,29 @@ export const experience = [
         ],
     },
 ];
+
+export const listProjects = [
+    {
+        id: 0,
+        icon: "folder",
+        link: {
+            linkIcon: "external-link",
+            mainLink: "https://github.com/ThriledLokki983/node-farm",
+        },
+        topic: "Node Farm.",
+        desc: "This is the start of intro to Nodejs where. This simple app makes a very good use of how data is retrieved and displayed on nthe webpage.",
+        languages: ["Javascript", "GitHub API", "Sass"],
+    },
+
+    {
+        id: 1,
+        icon: "folder",
+        link: {
+            linkIcon: "external-link",
+            mainLink: "https://github.com/ThriledLokki983/RecipeApp",
+        },
+        topic: "Natours App.",
+        desc: "Mastered the implementation of fetching data from an external server (Mongo-db).",
+        languages: ["Javascript", "GitHub API", "Sass"],
+    },
+];

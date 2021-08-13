@@ -1,7 +1,7 @@
 /** @format */
 
-import { experience, projects } from "./data.js";
-import { Project } from "./module.js";
+import { experience, projects, listProjects } from "./data.js";
+import { NoteworthyProjects, Project } from "./module.js";
 
 // const nav = document.querySelector(".navigation");
 const mobile_logo = document.querySelector(".header__nav");
@@ -24,6 +24,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 const proj = new Project(projects, 4);
 proj.loadProjects();
+
+const listProj = new NoteworthyProjects(listProjects, 2);
+listProj.loadNoteworthyProjects();
 
 const mobileMenu = function () {
     mainContent.classList.toggle("hidden");
