@@ -1,0 +1,6 @@
+---
+deployment:
+    tasks:
+        - export DEPLOYPATH=/home/nimogid/
+        - /bin/cp -R /home/nimogid/repositories/portfolio $DEPLOYPATH
+        # - /bin/cp -R /home/nimogid/repositories/portfolio $DEPLOYPATH
