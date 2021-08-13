@@ -3,4 +3,4 @@ deployment:
     tasks:
         - export DEPLOYPATH=/home/nimohgid/public_html/
         - /bin/cp -R /home/nimogid/repositories/portfolio $DEPLOYPATH
-        # - /bin/cp -R /home/nimogid/repositories/portfolio $DEPLOYPATH
+        - /bin/cp -R /home/nimogid/repositories/portfolio $DEPLOYPATH
