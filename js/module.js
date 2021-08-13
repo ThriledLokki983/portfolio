@@ -51,7 +51,8 @@ export class Project {
                 }.jpg 1000w"
                         sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw 300px"
                         alt="Photo ${item.name}"
-                        src="img/${item.photo}.jpg"/>
+                        src="img/${item.photo}.jpg"
+                        width="300px" height="350px"/>
                 </div>
                 </div>`;
 
