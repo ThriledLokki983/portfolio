@@ -28,11 +28,11 @@
         "links": [
             {
                 "icon": "github",
-                "link": "https://github.com/ThriledLokki983/RecipeApp"
+                "link": "https://github.com/ThriledLokki983/pig-game"
             },
             {
                 "icon": "external-link",
-                "link": "https://gideon-recipeapp.netlify.app/"
+                "link": "https://zen-allen-f446b7.netlify.app"
             }
         ],
         "className": "project__right"
