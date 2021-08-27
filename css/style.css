@@ -1,4 +1,5 @@
 /** @format */
+/** @format */
 /*
 * FONTS TO BE USED
 */
@@ -440,6 +441,7 @@ h6 {
   display: none;
   opacity: 0; }
 
+/** @format */
 .header {
   grid-area: head-start / left-start / head-end / right-end;
   width: 100vw;

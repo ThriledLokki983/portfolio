@@ -1,115 +1,117 @@
+/** @format */
+
 .header {
-    grid-area: head-start / left-start / head-end / right-end;
-    width: 100vw;
-    z-index: 9;
+	grid-area: head-start / left-start / head-end / right-end;
+	width: 100vw;
+	z-index: 9;
 
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: space-between;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: space-between;
 
-    padding: 1.5rem 10rem;
-    box-shadow: $shadow-dark;
+	padding: 1.5rem 10rem;
+	box-shadow: $shadow-dark;
 
-    &__logo-box {
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
-        animation: moveInLeft 1.2s ease-out;
+	&__logo-box {
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		animation: moveInLeft 1.2s ease-out;
 
-        display: flex;
-        align-items: center;
+		display: flex;
+		align-items: center;
 
-        .logo {
-            width: 4rem;
-            height: 4rem;
-        }
-    }
+		.logo {
+			width: 4rem;
+			height: 4rem;
+		}
+	}
 
-    &__nav {
-        align-self: center;
+	&__nav {
+		align-self: center;
 
-        &--list {
-            display: flex;
-            align-items: center;
-            animation: moveInRight 1.2s ease-out;
-        }
+		&--list {
+			display: flex;
+			align-items: center;
+			animation: moveInRight 1.2s ease-out;
+		}
 
-        &--item {
-            list-style: none;
-            font-size: 1.7rem;
+		&--item {
+			list-style: none;
+			font-size: 1.7rem;
 
-            & span {
-                margin-right: 0.4rem;
-                color: $green;
-                font-family: $font-robo-mono;
-                font-size: 1.3rem;
+			& span {
+				margin-right: 0.4rem;
+				color: $green;
+				font-family: $font-robo-mono;
+				font-size: 1.3rem;
 
-                display: flex;
-                align-items: center;
-            }
-        }
+				display: flex;
+				align-items: center;
+			}
+		}
 
-        &--link:link,
-        &--link:visited {
-            text-decoration: none;
-            display: block;
-            padding: 0.5rem 1.5rem;
-            color: $white;
-            display: flex;
-        }
-    }
+		&--link:link,
+		&--link:visited {
+			text-decoration: none;
+			display: block;
+			padding: 0.5rem 1.5rem;
+			color: $white;
+			display: flex;
+		}
+	}
 
-    @media only screen and (max-width: $bp-smallest) {
-        grid-column: main-start / main-end;
-        z-index: 10;
-        grid-row: 1 / 2;
-        transition: all 0.4s;
-        position: fixed;
-        background-color: inherit;
-        box-shadow: $shadow-dark;
+	@media only screen and (max-width: $bp-smallest) {
+		grid-column: main-start / main-end;
+		z-index: 10;
+		grid-row: 1 / 2;
+		transition: all 0.4s;
+		position: fixed;
+		background-color: inherit;
+		box-shadow: $shadow-dark;
 
-        padding: 1.5rem 1rem;
+		padding: 1.5rem 1rem;
 
-        &__logo-box {
-            display: none;
-            padding-left: 1rem;
-            animation: moveInLeft 1.2s ease-out;
-            position: relative;
+		&__logo-box {
+			display: none;
+			padding-left: 1rem;
+			animation: moveInLeft 1.2s ease-out;
+			position: relative;
 
-            &--logo {
-                width: 5rem;
-                height: 5rem;
-            }
-        }
+			&--logo {
+				width: 5rem;
+				height: 5rem;
+			}
+		}
 
-        &__nav--list {
-            display: none;
-        }
+		&__nav--list {
+			display: none;
+		}
 
-        &__nav {
-            display: flex;
-            padding-right: 1rem;
-            animation: moveInRight 1.2s ease-out;
-            margin-left: auto;
+		&__nav {
+			display: flex;
+			padding-right: 1rem;
+			animation: moveInRight 1.2s ease-out;
+			margin-left: auto;
 
-            &:before {
-                content: "";
-                display: inline-block;
-                height: 5rem;
-                width: 5rem;
-                cursor: pointer;
+			&:before {
+				content: "";
+				display: inline-block;
+				height: 5rem;
+				width: 5rem;
+				cursor: pointer;
 
-                @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-                    background-color: $green;
-                    -webkit-mask-image: url("../img/menu.svg");
-                    -webkit-mask-size: cover;
-                    mask-image: url("../img/menu.svg");
-                    mask-size: cover;
-                }
-            }
-        }
-    }
+				@supports (-webkit-mask-image: url()) or (mask-image: url()) {
+					background-color: $green;
+					-webkit-mask-image: url("../img/menu.svg");
+					-webkit-mask-size: cover;
+					mask-image: url("../img/menu.svg");
+					mask-size: cover;
+				}
+			}
+		}
+	}
 }
 
 // .navigation.sticky {
